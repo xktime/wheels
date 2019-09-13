@@ -14,12 +14,12 @@ public class Stack {
 	private int REDUCTION_SIZE = 70;
 	private double MAX_PROBABILITY = 100;//类型为double是为了计算的时候不需要再转换类型
 
-	private Stack(){
+	private Stack() {
 		arr = new int[INITIAL_VALUE];
 	}
 
 	//单例，使用单例是方便以后用来测试多线程
-	public static Stack getMe(){
+	public static Stack getMe() {
 		if (stack == null) {
 			synchronized (lock_object) {
 				if (stack == null) {
@@ -30,16 +30,16 @@ public class Stack {
 		return stack;
 	}
 
-	public void push (int value) {
+	public void push(int value) {
 		if (size() > (length() - 1)) {
 			System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
 			return;
 		}
 		arr[point++] = value;
 		//数组需要扩容的阈值
-		double expansion = length() * (EXPANSION_PROBABILITY/MAX_PROBABILITY);
+		double expansion = length() * (EXPANSION_PROBABILITY / MAX_PROBABILITY);
 		if (size() >= expansion) {
-			int size = (int)(length() * (EXPANSION_SIZE/MAX_PROBABILITY));
+			int size = (int) (length() * (EXPANSION_SIZE / MAX_PROBABILITY));
 			autoAdjustedSize(size);
 		}
 	}
@@ -51,9 +51,9 @@ public class Stack {
 		}
 		--point;
 		//数组需要缩小的阈值
-		double reduction = length() * (REDUCTION_PROBABILITY/MAX_PROBABILITY);
+		double reduction = length() * (REDUCTION_PROBABILITY / MAX_PROBABILITY);
 		if (size() < reduction) {
-			int size = (int)(length() * (REDUCTION_SIZE/MAX_PROBABILITY));
+			int size = (int) (length() * (REDUCTION_SIZE / MAX_PROBABILITY));
 			autoAdjustedSize(size);
 		}
 	}
@@ -76,7 +76,7 @@ public class Stack {
 		StringBuilder str1 = new StringBuilder();
 		str1.append('[');
 		for (int i = 0; i < point; i++) {
-			if (i != point-1) {
+			if (i != (point - 1)) {
 				str1.append(arr[i]).append('、');
 			} else {
 				str1.append(arr[i]);
@@ -88,6 +88,7 @@ public class Stack {
 
 	/**
 	 * 调整数组大小
+	 *
 	 * @param size 调整后数组的大小
 	 */
 	private void autoAdjustedSize(int size) {
