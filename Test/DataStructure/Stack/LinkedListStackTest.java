@@ -1,10 +1,10 @@
 package DataStructure.Stack;
 
-import Stack.LinkedListStack;
+import Stack.LinkedListStackImpl;
 
 public class LinkedListStackTest {
 	public static void main(String[] args) {
-		LinkedListStack<Integer> stack = new LinkedListStack();
+		LinkedListStackImpl<Integer> stack = new LinkedListStackImpl();
 		for (int i = 0; i < 10; i++) {
 			stack.push(i);
 		}

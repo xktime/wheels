@@ -1,6 +1,6 @@
 package Stack;
 
-public class ArrayStack<T> implements Stack {
+public class ArrayStackImpl<T> implements Stack {
 	private T[] array;
 	private int point = 0;//栈顶指针
 	//容量达到最大容量的百分比之后，进行扩容或缩小
@@ -11,7 +11,7 @@ public class ArrayStack<T> implements Stack {
 	private int REDUCTION_SIZE = 70;
 	private double MAX_PROBABILITY = 100;//类型为double是为了计算的时候不需要再转换类型
 
-	public ArrayStack(int size) {
+	public ArrayStackImpl(int size) {
 		array = (T[]) new Object[size];
 	}
 

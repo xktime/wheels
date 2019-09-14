@@ -1,7 +1,7 @@
 package Stack;
 
 
-public class LinkedListStack<T> implements Stack {
+public class LinkedListStackImpl<T> implements Stack {
 	private class Node {
 		Node next;
 		T element;
