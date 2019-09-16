@@ -44,20 +44,19 @@ public class LinkedListStackImpl<T> implements Stack<T> {
 	@Override
 	public String toString() {
 		//按出栈顺序打印，暂时先这样测试用；等之后写了反转字符串之后再来从新实现入栈顺序打印
-		StringBuilder str1 = new StringBuilder();
+		StringBuilder str = new StringBuilder();
 		if (isEmpty()) {
-			return str1.append('[').append(']').toString();
+			return str.append('[').append(']').toString();
 		}
 		Node tempTop = top;
-		str1.append('[');
+		str.append('[');
 		while (tempTop.next != null) {
-			str1.append(tempTop.element).append('、');
+			str.append(tempTop.element).append('、');
 			tempTop = tempTop.next;
 		}
-		if (tempTop.next == null) {
-			str1.append(tempTop.element);
-		}
-		str1.append(']');
-		return str1.toString();
+		//最后一个元素不加顿号
+		str.append(tempTop.element);
+		str.append(']');
+		return str.toString();
 	}
 }
