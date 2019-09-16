@@ -1,7 +1,7 @@
 package Stack;
 
 
-public class LinkedListStackImpl<T> implements Stack {
+public class LinkedListStackImpl<T> implements Stack<T> {
 	private class Node {
 		Node next;
 		T element;
@@ -11,16 +11,16 @@ public class LinkedListStackImpl<T> implements Stack {
 	private int size = 0;
 
 	@Override
-	public void push(Object element) {
+	public void push(T element) {
 		Node newTop = new Node();
-		newTop.element = (T) element;
+		newTop.element = element;
 		newTop.next = top;
 		top = newTop;
 		size++;
 	}
 
 	@Override
-	public Object pop() {
+	public T pop() {
 		if (size == 0) {
 			System.out.println("空栈不能执行pop操作");
 			return null;

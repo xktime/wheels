@@ -1,7 +1,7 @@
 package Stack;
 
 public interface Stack<T> {
-	void push(T element);//进栈
+	void push(T e);//进栈
 
 	T pop();//出栈
 

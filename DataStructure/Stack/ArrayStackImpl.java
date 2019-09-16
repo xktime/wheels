@@ -1,6 +1,6 @@
 package Stack;
 
-public class ArrayStackImpl<T> implements Stack {
+public class ArrayStackImpl<T> implements Stack<T> {
     private T[] array;
     private int topPoint = 0;//栈顶指针
     //容量达到最大容量的百分比之后，进行扩容或缩小
@@ -16,12 +16,12 @@ public class ArrayStackImpl<T> implements Stack {
     }
 
     @Override
-    public void push(Object element) {
+    public void push(T element) {
         if (size() > (array.length - 1)) {
             System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
             return;
         }
-        array[topPoint++] = (T) element;
+        array[topPoint++] = element;
         //数组需要扩容的阈值
         double expansion = array.length * (EXPANSION_PROBABILITY / MAX_PROBABILITY);
         if (size() >= expansion) {
