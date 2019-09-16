@@ -43,14 +43,14 @@ public class LinkedListQueueImpl<T> implements Queue<T> {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder str = new StringBuilder();
         if (isEmpty()) {
             return str.append('[').append(']').toString();
         }
         Node temp = front;
         str.append('[');
-        while (temp.next != rear){
+        while (temp.next != rear) {
             str.append(temp.element).append('、');
             temp = temp.next;
         }

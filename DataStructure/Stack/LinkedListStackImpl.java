@@ -2,61 +2,61 @@ package Stack;
 
 
 public class LinkedListStackImpl<T> implements Stack<T> {
-	private class Node {
-		Node next;
-		T element;
-	}
+    private class Node {
+        Node next;
+        T element;
+    }
 
-	private Node top;//栈顶元素
-	private int size = 0;
+    private Node top;//栈顶元素
+    private int size = 0;
 
-	@Override
-	public void push(T element) {
-		Node newTop = new Node();
-		newTop.element = element;
-		newTop.next = top;
-		top = newTop;
-		size++;
-	}
+    @Override
+    public void push(T element) {
+        Node newTop = new Node();
+        newTop.element = element;
+        newTop.next = top;
+        top = newTop;
+        size++;
+    }
 
-	@Override
-	public T pop() {
-		if (size == 0) {
-			System.out.println("空栈不能执行pop操作");
-			return null;
-		}
-		size--;
-		T element = top.element;
-		top = top.next;
-		return element;
-	}
+    @Override
+    public T pop() {
+        if (size == 0) {
+            System.out.println("空栈不能执行pop操作");
+            return null;
+        }
+        size--;
+        T element = top.element;
+        top = top.next;
+        return element;
+    }
 
-	@Override
-	public int size() {
-		return size;
-	}
+    @Override
+    public int size() {
+        return size;
+    }
 
-	@Override
-	public boolean isEmpty() {
-		return size == 0;
-	}
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
 
-	@Override
-	public String toString() {
-		//按出栈顺序打印，暂时先这样测试用；等之后写了反转字符串之后再来从新实现入栈顺序打印
-		StringBuilder str = new StringBuilder();
-		if (isEmpty()) {
-			return str.append('[').append(']').toString();
-		}
-		Node tempTop = top;
-		str.append('[');
-		while (tempTop.next != null) {
-			str.append(tempTop.element).append('、');
-			tempTop = tempTop.next;
-		}
-		//最后一个元素不加顿号
-		str.append(tempTop.element);
-		str.append(']');
-		return str.toString();
-	}
+    @Override
+    public String toString() {
+        //按出栈顺序打印，暂时先这样测试用；等之后写了反转字符串之后再来从新实现入栈顺序打印
+        StringBuilder str = new StringBuilder();
+        if (isEmpty()) {
+            return str.append('[').append(']').toString();
+        }
+        Node tempTop = top;
+        str.append('[');
+        while (tempTop.next != null) {
+            str.append(tempTop.element).append('、');
+            tempTop = tempTop.next;
+        }
+        //最后一个元素不加顿号
+        str.append(tempTop.element);
+        str.append(']');
+        return str.toString();
+    }
 }
