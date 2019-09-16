@@ -42,7 +42,8 @@ public class ArrayStackImpl<T> implements Stack {
         double reduction = array.length * (REDUCTION_PROBABILITY / MAX_PROBABILITY);
         if (size() < reduction) {
             double size = array.length * (REDUCTION_SIZE / MAX_PROBABILITY);
-            resize(floor(size));
+            //这里向上取整是因为向下取整可能导致容量被resize为0
+            resize(ceil(size));
         }
         return element;
     }
@@ -103,13 +104,4 @@ public class ArrayStackImpl<T> implements Stack {
         return (int) value + 1;
     }
 
-    /**
-     * 向下取整
-     *
-     * @param value
-     * @return
-     */
-    private int floor(double value) {
-        return (int) value;
-    }
 }
