@@ -55,7 +55,7 @@ public class SinglyLinkedListImpl<T> implements LinkedList<T> {
 
     @Override
     public T delete(int index) {
-        if (size == 0) {
+        if (isEmpty()) {
             System.out.println("空表不能删除元素");
             return null;
         }
@@ -77,6 +77,7 @@ public class SinglyLinkedListImpl<T> implements LinkedList<T> {
             oldNode = oldNode.next;
         }
         beforeNode.next = oldNode.next;
+        size--;
         return oldNode.element;
     }
 
