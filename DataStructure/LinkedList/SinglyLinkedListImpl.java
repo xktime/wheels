@@ -109,6 +109,11 @@ public class SinglyLinkedListImpl<T> implements LinkedList<T> {
     }
 
     @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
     public String toString() {
         StringBuilder str = new StringBuilder();
         if (size == 0) {

@@ -17,4 +17,6 @@ interface LinkedList<T> {
     int find(T e);//元素在链表中首次出现的位置。返回值为0表示没有找到元素
 
     int size();//返回链表大小
+
+    boolean isEmpty();//是否为空
 }
