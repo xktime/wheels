@@ -1,0 +1,213 @@
+package Tree;
+
+public class BinarySearchTreeImpl implements Tree {
+    class Node {
+        Node lChild;//左孩子
+        Node rChild;//右孩子
+        int size;//已该节点为根节点的节点数
+        int value;//改节点的值
+    }
+
+    Node root;
+
+    @Override
+    public void put(int value) {
+        root = put(root, value);
+    }
+
+    @Override
+    public boolean remove(int value) {
+        if (!contain(value)) {
+            //不包含元素直接返回
+            return false;
+        }
+        Node parentNode = findParentNode(root, value);//被删除节点的父节点
+        Node node = find(parentNode, value);//被删除的节点
+        //如果被删除节点之后没有节点，直接删除
+        if (node.lChild == null && node.rChild == null) {
+            if (parentNode.lChild == node) {
+                parentNode.lChild = null;
+            } else if (parentNode.rChild == node) {
+                parentNode.rChild = null;
+            }
+            return true;
+        }
+        if (node.lChild == null) {
+
+        }
+        return true;
+    }
+
+    @Override
+    public boolean contain(int value) {
+        return find(root,value) != null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return size() == 0;
+    }
+
+    @Override
+    public int size() {
+        return size(root);
+    }
+
+    @Override
+    public void DLR() {
+        StringBuilder str = new StringBuilder();
+        DLR(root, str);
+        formatString(str,"先序遍历：");
+        System.out.println(str.toString());
+    }
+
+    @Override
+    public void LDR() {
+        StringBuilder str = new StringBuilder();
+        LDR(root, str);
+        formatString(str,"中序遍历：");
+        System.out.println(str.toString());
+    }
+
+    @Override
+    public void LRD() {
+        StringBuilder str = new StringBuilder();
+        LRD(root, str);
+        formatString(str,"后序遍历：");
+        System.out.println(str.toString());
+    }
+
+    /**
+     * 递归插入元素
+     * @param node
+     * @param value
+     * @return
+     */
+    private Node put (Node node, int value) {
+        if (node == null) {
+            //终结条件，返回被插入节点
+            Node newNode = new Node();
+            newNode.size = 1;
+            newNode.value = value;
+            return newNode;
+        }
+        if (value > node.value) {
+            node.rChild = put(node.rChild, value);
+        } else if (value < node.value) {
+            node.lChild = put(node.lChild, value);
+        }
+        //最后加的1是自身
+        node.size = size(node.rChild) + size(node.lChild) + 1;
+        return node;
+    }
+
+    /**
+     * 递归查找元素
+     * @param node
+     * @param value
+     * @return
+     */
+    private Node find(Node node, int value) {
+        if (node == null) {
+            return null;
+        }
+        if (value == node.value) {
+            return node;
+        }
+        if (value > node.value) {
+            node = find(node.rChild, value);
+        } else {
+            node = find(node.lChild, value);
+        }
+        return node;
+    }
+
+    /**
+     * 递归查找元素的双亲节点
+     * @param node
+     * @param value
+     * @return
+     */
+    private Node findParentNode(Node node, int value){
+        if (node == null) {
+            return null;
+        }
+        if (node.lChild.value == value || node.rChild.value == value) {
+            return node;
+        }
+        if (value > node.value) {
+            node = findParentNode(node.rChild, value);
+        } else {
+            node = findParentNode(node.lChild, value);
+        }
+        return node;
+    }
+
+    /**
+     * 先序遍历
+     * @param node
+     * @param str
+     */
+    private void DLR(Node node, StringBuilder str) {
+        if (node == null) {
+            return;
+        }
+        str.append(node.value).append('、');
+        DLR(node.lChild, str);
+        DLR(node.rChild, str);
+    }
+
+    /**
+     * 中序遍历
+     * @param node
+     * @param str
+     */
+    private void LDR(Node node, StringBuilder str) {
+        if (node == null) {
+            return;
+        }
+        LDR(node.lChild, str);
+        str.append(node.value).append('、');
+        LDR(node.rChild, str);
+    }
+
+    /**
+     * 后序遍历
+     * @param node
+     * @param str
+     */
+    private void LRD(Node node, StringBuilder str) {
+        if (node == null) {
+            return;
+        }
+        LRD(node.lChild, str);
+        LRD(node.rChild, str);
+        str.append(node.value).append('、');
+    }
+
+    /**
+     * 对打印的字符串格式化
+     * @param str
+     * @param s  在字符前插入字符
+     */
+    private void formatString(StringBuilder str, String s){
+        int index = str.lastIndexOf("、");
+        str.delete(index, index+1);
+        str.insert(0,'[').append(']');
+        str.insert(0,s);
+    }
+
+
+
+    /**
+     * 参数节点的子节点个数
+     * @param node
+     * @return
+     */
+    private int size(Node node) {
+        if (node == null) {
+            return 0;
+        }
+        return node.size;
+    }
+}
