@@ -108,9 +108,6 @@ public class BinarySearchTreeImpl implements Tree {
     /**
      * 递归插入元素
      *
-     * @param node
-     * @param value
-     * @return
      */
     private Node put(Node node, int value) {
         if (node == null) {
@@ -133,9 +130,6 @@ public class BinarySearchTreeImpl implements Tree {
     /**
      * 递归查找元素
      *
-     * @param node
-     * @param value
-     * @return
      */
     private Node find(Node node, int value) {
         if (node == null) {
@@ -155,9 +149,6 @@ public class BinarySearchTreeImpl implements Tree {
     /**
      * 递归查找元素的双亲节点
      *
-     * @param node
-     * @param value
-     * @return
      */
     private Node findParentNode(Node node, int value) {
         if (node == null) {
@@ -176,16 +167,13 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归查找元素的前趋节点
-     *
-     * @param node
-     * @return
      */
     private Node findPriorNode(Node node) {
         if (node == null) {
             return null;
         }
-        Node lChild = node.lChild;
-        Node priorNode = lChild;
+        //节点的前驱节点是小于节点的最大节点，即左孩子节点的最右节点
+        Node priorNode = node.lChild;
         while (priorNode.rChild != null) {
             priorNode = priorNode.rChild;
         }
@@ -194,9 +182,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 先序遍历
-     *
-     * @param node
-     * @param str
      */
     private void DLR(Node node, StringBuilder str) {
         if (node == null) {
@@ -209,9 +194,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 中序遍历
-     *
-     * @param node
-     * @param str
      */
     private void LDR(Node node, StringBuilder str) {
         if (node == null) {
@@ -224,9 +206,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 后序遍历
-     *
-     * @param node
-     * @param str
      */
     private void LRD(Node node, StringBuilder str) {
         if (node == null) {
@@ -240,7 +219,6 @@ public class BinarySearchTreeImpl implements Tree {
     /**
      * 对打印的字符串格式化
      *
-     * @param str
      * @param s   在字符前插入字符
      */
     private void formatString(StringBuilder str, String s) {
@@ -251,11 +229,9 @@ public class BinarySearchTreeImpl implements Tree {
         str.insert(0, s);
     }
 
-
     /**
-     * 总节点数
+     * 获取总节点数
      *
-     * @param node
      * @return 以参数节点为根节点的总结点数
      */
     private int size(Node node) {
