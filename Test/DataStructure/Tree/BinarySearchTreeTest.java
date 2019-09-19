@@ -13,9 +13,13 @@ public class BinarySearchTreeTest {
         tree.put(9);
         tree.put(4);
         tree.put(2);
+        tree.put(10);
+        tree.put(11);
         tree.DLR();
         tree.LDR();
         tree.LRD();
         System.out.println("二叉树总共有" + tree.size() + "个节点");
+        tree.remove(8);
+        tree.DLR();
     }
 }

@@ -4,11 +4,11 @@ public class BinarySearchTreeImpl implements Tree {
     class Node {
         Node lChild;//左孩子
         Node rChild;//右孩子
-        int size;//已该节点为根节点的节点数
-        int value;//改节点的值
+        int size;//以该节点为根节点的总结点数
+        int value;//该节点的值
     }
 
-    Node root;
+    private Node root;
 
     @Override
     public void put(int value) {
@@ -17,6 +17,7 @@ public class BinarySearchTreeImpl implements Tree {
 
     @Override
     public boolean remove(int value) {
+        //太不优雅了！！-0- 后面重构一下
         if (!contain(value)) {
             //不包含元素直接返回
             return false;
@@ -32,15 +33,42 @@ public class BinarySearchTreeImpl implements Tree {
             }
             return true;
         }
+        //如果被删除节点只有一个孩子，那么直接将该孩子节点放到被删除节点的位置
         if (node.lChild == null) {
-
+            if (parentNode.lChild == node) {
+                parentNode.lChild = node.rChild;
+            } else if (parentNode.rChild == node) {
+                parentNode.rChild = node.rChild;
+            }
+            return true;
+        } else if (node.rChild == null) {
+            if (parentNode.lChild == node) {
+                parentNode.lChild = node.lChild;
+            } else if (parentNode.rChild == node) {
+                parentNode.rChild = node.lChild;
+            }
+            return true;
+        }
+        //如果被删除节点有两个孩子
+        if (parentNode.lChild == node) {
+            Node priorNode = findPriorNode(node);
+            remove(priorNode.value);
+            parentNode.lChild = priorNode;
+            priorNode.lChild = node.lChild;
+            priorNode.rChild = node.rChild;
+        } else if (parentNode.rChild == node) {
+            Node priorNode = findPriorNode(node);
+            remove(priorNode.value);
+            parentNode.rChild = priorNode;
+            priorNode.lChild = node.lChild;
+            priorNode.rChild = node.rChild;
         }
         return true;
     }
 
     @Override
     public boolean contain(int value) {
-        return find(root,value) != null;
+        return find(root, value) != null;
     }
 
     @Override
@@ -57,7 +85,7 @@ public class BinarySearchTreeImpl implements Tree {
     public void DLR() {
         StringBuilder str = new StringBuilder();
         DLR(root, str);
-        formatString(str,"先序遍历：");
+        formatString(str, "先序遍历：");
         System.out.println(str.toString());
     }
 
@@ -65,7 +93,7 @@ public class BinarySearchTreeImpl implements Tree {
     public void LDR() {
         StringBuilder str = new StringBuilder();
         LDR(root, str);
-        formatString(str,"中序遍历：");
+        formatString(str, "中序遍历：");
         System.out.println(str.toString());
     }
 
@@ -73,17 +101,18 @@ public class BinarySearchTreeImpl implements Tree {
     public void LRD() {
         StringBuilder str = new StringBuilder();
         LRD(root, str);
-        formatString(str,"后序遍历：");
+        formatString(str, "后序遍历：");
         System.out.println(str.toString());
     }
 
     /**
      * 递归插入元素
+     *
      * @param node
      * @param value
      * @return
      */
-    private Node put (Node node, int value) {
+    private Node put(Node node, int value) {
         if (node == null) {
             //终结条件，返回被插入节点
             Node newNode = new Node();
@@ -103,6 +132,7 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归查找元素
+     *
      * @param node
      * @param value
      * @return
@@ -124,11 +154,12 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归查找元素的双亲节点
+     *
      * @param node
      * @param value
      * @return
      */
-    private Node findParentNode(Node node, int value){
+    private Node findParentNode(Node node, int value) {
         if (node == null) {
             return null;
         }
@@ -144,7 +175,26 @@ public class BinarySearchTreeImpl implements Tree {
     }
 
     /**
+     * 递归查找元素的前趋节点
+     *
+     * @param node
+     * @return
+     */
+    private Node findPriorNode(Node node) {
+        if (node == null) {
+            return null;
+        }
+        Node lChild = node.lChild;
+        Node priorNode = lChild;
+        while (priorNode.rChild != null) {
+            priorNode = priorNode.rChild;
+        }
+        return priorNode;
+    }
+
+    /**
      * 先序遍历
+     *
      * @param node
      * @param str
      */
@@ -159,6 +209,7 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 中序遍历
+     *
      * @param node
      * @param str
      */
@@ -173,6 +224,7 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 后序遍历
+     *
      * @param node
      * @param str
      */
@@ -187,22 +239,24 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 对打印的字符串格式化
+     *
      * @param str
-     * @param s  在字符前插入字符
+     * @param s   在字符前插入字符
      */
-    private void formatString(StringBuilder str, String s){
+    private void formatString(StringBuilder str, String s) {
         int index = str.lastIndexOf("、");
-        str.delete(index, index+1);
-        str.insert(0,'[').append(']');
-        str.insert(0,s);
+        //删除最后一个顿号
+        str.delete(index, index + 1);
+        str.insert(0, '[').append(']');
+        str.insert(0, s);
     }
 
 
-
     /**
-     * 参数节点的子节点个数
+     * 总节点数
+     *
      * @param node
-     * @return
+     * @return 以参数节点为根节点的总结点数
      */
     private int size(Node node) {
         if (node == null) {
