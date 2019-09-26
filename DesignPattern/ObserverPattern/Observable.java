@@ -1,6 +1,6 @@
 package ObserverPattern;
 
-interface Observable {
+public interface Observable {
     void registerObserver(Observer observer);//注册观察者
 
     void removeObserver(Observer observer);//删除观察者
