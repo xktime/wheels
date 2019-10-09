@@ -3,12 +3,16 @@ package FactoryPattern;
 public class DrinkShopFactory {
 
     public DrinkShop createDrinkShop(String shopName) {
-        if (shopName.equals("Coke")) {
-            return new CokeShop();
-        } else if (shopName.equals("Coffee")) {
-            return new CokeShop();
-        } else if (shopName.equals("MilkTea")) {
-            return new CokeShop();
+        if (shopName == null) {
+            return null;
+        }
+        switch (shopName) {
+            case "Coke":
+                return new CokeShopImpl();
+            case "Coffee":
+                return new CoffeeShopImpl();
+            case "MilkTea":
+                return new MilkTeaShopImpl();
         }
         return null;
     }
