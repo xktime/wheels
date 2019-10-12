@@ -50,7 +50,7 @@ public class DoublyLinkedListImpl<T> implements LinkedList<T> {
     }
 
     @Override
-    public T delete(int index) {
+    public T remove(int index) {
         if (isEmpty()) {
             System.out.println("空表不能删除元素");
             return null;

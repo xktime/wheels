@@ -17,8 +17,8 @@ public class SinglyLinkedListTest {
         System.out.println(linkedList);
         System.out.println("===============删除元素=================");
         System.out.println("先删除第5个元素，再删除第100个元素");
-        linkedList.delete(5);
-        linkedList.delete(100);
+        linkedList.remove(5);
+        linkedList.remove(100);
         System.out.println(linkedList);
         System.out.println("===============查找元素=================");
         System.out.println(linkedList);

@@ -9,7 +9,7 @@ public interface List<T> {
 
     T get(int index);//获取参数下标元素
 
-    int indexOf(T e);//获取元素第一次出现位置处的索引
+    int indexOf(T e);////元素在List中首次出现的下标。返回值为-1表示没有找到元素
 
     boolean contains(T e);//是否包含元素
 

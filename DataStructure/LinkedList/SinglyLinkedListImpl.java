@@ -54,14 +54,14 @@ public class SinglyLinkedListImpl<T> implements LinkedList<T> {
     }
 
     @Override
-    public T delete(int index) {
+    public T remove(int index) {
         if (isEmpty()) {
             System.out.println("空表不能删除元素");
             return null;
         }
         if (index > size) {
             //如果index大于size删除最后一个元素
-            return delete(size);
+            return remove(size);
         }
         Node oldNode = head;//被删除的节点
         Node beforeNode = new Node();

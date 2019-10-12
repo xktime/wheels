@@ -10,7 +10,7 @@ interface LinkedList<T> {
 
     void insert(T e, int index);//插入元素
 
-    T delete(int index);//根据下标删除元素，返回被删除的节点的值
+    T remove(int index);//根据下标删除元素，返回被删除的节点的值
 
     T get(int index);//根据下标获取元素
 
