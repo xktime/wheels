@@ -66,11 +66,6 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
     }
 
     @Override
-    public void sort() {
-
-    }
-
-    @Override
     public void clear() {
         for (int i = 0; i < size(); i++) {
             array[i] = null;

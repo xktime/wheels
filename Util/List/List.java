@@ -5,8 +5,6 @@ public interface List<T> {
 
     boolean remove(T e);//删除元素
 
-    void sort();//对List进行排序
-
     void clear();//清空List
 
     T get(int index);//获取参数下标元素
