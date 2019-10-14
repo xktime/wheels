@@ -19,6 +19,9 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
 
     @Override
     public boolean add(T e) {
+        if (e == null) {
+            return false;
+        }
         if (size() > (array.length - 1)) {
             System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
             return false;
@@ -36,7 +39,7 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
     @Override
     public boolean remove(T e) {
         //List没有这个元素或者List为空，返回false
-        if (isEmpty() || !contains(e)) {
+        if (e == null || isEmpty() || !contains(e)) {
             return false;
         }
         for (int j = 0; j < size(); j++) {
@@ -83,7 +86,7 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
 
     @Override
     public int indexOf(T e) {
-        if (isEmpty()) {
+        if (e == null || isEmpty()) {
             return -1;
         }
         for (int i = 0; i < size(); i++) {
@@ -96,7 +99,7 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
 
     @Override
     public boolean contains(T e) {
-        if (isEmpty()) {
+        if (e == null || isEmpty()) {
             return false;
         }
         for (int i = 0; i < size(); i++) {
