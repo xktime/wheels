@@ -3,61 +3,73 @@ package Stack;
 import Funciton.ArrayDynamic;
 
 public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
-	private T[] array;
-	private int topPoint = 0;//栈顶指针
+    private T[] array;
+    private static final Object[] empty_array = {}; //用于空实例
+    private int topPoint = 0;//栈顶指针
+    private final int DEFAULT_CAPACITY = 10;//默认大小
 
-	public ArrayStackImpl(int size) {
-		array = (T[]) new Object[size];
-	}
+    public ArrayStackImpl() {
+        array = (T[]) new Object[DEFAULT_CAPACITY];
+    }
 
-	@Override
-	public void push(T element) {
-		if (size() > (array.length - 1)) {
-			System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
-			return;
-		}
-		array[topPoint++] = element;
-		array = (T[]) expationCapacity(array, size());
-	}
+    public ArrayStackImpl(int size) {
+        if (size > 0) {
+            array = (T[]) new Object[size];
+        } else if (size == 0) {
+            array = (T[]) empty_array;
+        } else {
+            System.out.println("初始容量错误");
+        }
+    }
 
-	@Override
-	public T pop() {
-		if (isEmpty()) {
-			System.out.println("空栈不能执行pop操作");
-			return null;
-		}
-		T element = array[--topPoint];
-		array = (T[]) trimCapacity(array, size());
-		return element;
-	}
+    @Override
+    public void push(T element) {
+        if (size() > (array.length - 1)) {
+            System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
+            return;
+        }
+        array[topPoint++] = element;
+        array = (T[]) expationCapacity(array, size());
+    }
 
-	/**
-	 * @return 栈内当前元素的个数
-	 */
-	@Override
-	public int size() {
-		return topPoint;
-	}
+    @Override
+    public T pop() {
+        if (isEmpty()) {
+            System.out.println("空栈不能执行pop操作");
+            return null;
+        }
+        T element = array[--topPoint];
+        array = (T[]) trimCapacity(array, size());
+        return element;
+    }
 
-	@Override
-	public String toString() {
-		//按入栈顺序打印
-		StringBuilder str1 = new StringBuilder();
-		str1.append('[');
-		for (int i = 0; i < topPoint; i++) {
-			if (i != (topPoint - 1)) {
-				str1.append(array[i]).append('、');
-			} else {
-				str1.append(array[i]);
-			}
-		}
-		str1.append(']');
-		return str1.toString();
-	}
+    /**
+     * @return 栈内当前元素的个数
+     */
+    @Override
+    public int size() {
+        return topPoint;
+    }
 
-	@Override
-	public boolean isEmpty() {
-		return size() == 0;
-	}
+    @Override
+    public String toString() {
+        //按入栈顺序打印
+        StringBuilder str1 = new StringBuilder();
+        str1.append('[');
+        for (int i = 0; i < topPoint; i++) {
+            if (i != (topPoint - 1)) {
+                str1.append(array[i]).append('、');
+            } else {
+                str1.append(array[i]);
+            }
+        }
+        str1.append(']');
+        return str1.toString();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return size() == 0;
+    }
 
 }

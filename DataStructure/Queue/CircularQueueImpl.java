@@ -6,7 +6,11 @@ public class CircularQueueImpl<T> implements Queue<T> {
     private int rear = -1;//队尾指针
 
     public CircularQueueImpl(int size) {
-        array = (T[]) new Object[size];
+        if (size > 0) {
+            array = (T[]) new Object[size];
+        } else {
+            System.out.println("初始容量错误");
+        }
     }
 
     @Override
