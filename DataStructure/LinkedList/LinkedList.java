@@ -5,7 +5,7 @@ package LinkedList;
  * 接口不能重写内部类，用抽象类又都没有具体实现。
  * 于是想着反正都要重写Node，就暂时先用接口了。后面去看一下Java的API
  */
-interface LinkedList<T> {
+public interface LinkedList<T> {
     void add(T e);//在链尾添加元素
 
     void insert(T e, int index);//插入元素

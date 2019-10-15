@@ -1,10 +1,10 @@
 package DataStructure.Stack;
 
-import Stack.LinkedListStackImpl;
+import Stack.*;
 
 public class LinkedListStackTest {
     public static void main(String[] args) {
-        LinkedListStackImpl<Integer> stack = new LinkedListStackImpl<Integer>();
+        Stack<Integer> stack = new LinkedListStackImpl<Integer>();
         System.out.println("=============入栈===================");
         //入栈操作
         for (int i = 0; i < 10; i++) {

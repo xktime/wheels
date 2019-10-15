@@ -1,10 +1,10 @@
 package DataStructure.LinkedList;
 
-import LinkedList.SinglyLinkedListImpl;
+import LinkedList.*;
 
 public class SinglyLinkedListTest {
     public static void main(String[] args) {
-        SinglyLinkedListImpl<Integer> linkedList = new SinglyLinkedListImpl<Integer>();
+        LinkedList<Integer> linkedList = new SinglyLinkedListImpl<Integer>();
         System.out.println("===============添加元素=================");
         for (int i = 0; i < 10; i++) {
             linkedList.add(i);

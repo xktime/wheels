@@ -1,10 +1,10 @@
 package DataStructure.LinkedList;
 
-import LinkedList.DoublyLinkedListImpl;
+import LinkedList.*;
 
 public class DoublyLinkedListTest {
     public static void main(String[] args) {
-        DoublyLinkedListImpl<Integer> linkedList = new DoublyLinkedListImpl<Integer>();
+        LinkedList<Integer> linkedList = new DoublyLinkedListImpl<Integer>();
         System.out.println("===============添加元素=================");
         for (int i = 0; i < 10; i++) {
             linkedList.add(i);
