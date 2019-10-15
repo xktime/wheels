@@ -3,8 +3,7 @@ package Funciton;
 /**
  * 动态扩展或缩小的数组继承类
  */
-public abstract class ArrayDynamicEx {
-    private final int DEFAULT_CAPACITY = 10;//List默认大小
+public abstract class ArrayDynamic {
     //容量达到最大容量的百分比之后，进行扩容或缩小
     private int EXPANSION_PROBABILITY = 80;//不能大于100，大于100会导致数组无法扩容
     private int REDUCTION_PROBABILITY = 50;//不能大于REDUCTION_SIZE，否则会导致当前的栈内元素个数多于缩小后的数组大小，引起越界异常
@@ -17,7 +16,7 @@ public abstract class ArrayDynamicEx {
      * 扩大容量
      *
      * @param array 需要修改大小的数组
-     * @param size  数组现在的实际大小
+     * @param size  数组的元素个数
      * @return
      */
     protected Object[] expationCapacity(Object[] array, int size) {
@@ -34,7 +33,7 @@ public abstract class ArrayDynamicEx {
      * 缩小容量
      *
      * @param array 需要修改大小的数组
-     * @param size  数组现在的实际大小
+     * @param size  数组的元素个数
      * @return
      */
     protected Object[] trimCapacity(Object[] array, int size) {
@@ -55,7 +54,7 @@ public abstract class ArrayDynamicEx {
      * 调整数组大小
      *
      * @param array
-     * @param size        队尾指针。因为数组之后的元素没有删除，需要确定数组的实际大小
+     * @param size        数组的元素个数。因为数组之后的元素没有删除，需要确定数组的元素个数
      * @param resizedSize 需要将数组调整到的大小
      * @return
      */

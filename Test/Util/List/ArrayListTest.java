@@ -4,7 +4,7 @@ import List.ArrayListImpl;
 
 public class ArrayListTest {
     public static void main(String[] args) {
-        ArrayListImpl<Integer> arrayList = new ArrayListImpl<Integer>(5);
+        ArrayListImpl<Integer> arrayList = new ArrayListImpl<Integer>();
         System.out.println("=============添加元素===================");
         for (int i = 0; i < 10; i++) {
             arrayList.add(i);

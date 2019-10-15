@@ -1,8 +1,8 @@
 package List;
 
-import Funciton.ArrayDynamicEx;
+import Funciton.ArrayDynamic;
 
-public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
+public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
     private T[] array;
     private static final Object[]  empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
@@ -116,5 +116,13 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
         }
         str1.append(']');
         return str1.toString();
+    }
+
+    /**
+     * List数组的大小，测试用
+     * @return
+     */
+    public int length() {
+        return array.length;
     }
 }

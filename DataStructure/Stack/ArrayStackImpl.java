@@ -1,8 +1,8 @@
 package Stack;
 
-import Funciton.ArrayDynamicEx;
+import Funciton.ArrayDynamic;
 
-public class ArrayStackImpl<T> extends ArrayDynamicEx implements Stack<T> {
+public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
 	private T[] array;
 	private int topPoint = 0;//栈顶指针
 
