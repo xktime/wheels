@@ -4,7 +4,9 @@ import Funciton.ArrayDynamicEx;
 
 public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
     private T[] array;
+    private static final Object[]  empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
+    private final int DEFAULT_CAPACITY = 10;//List默认大小
     //容量达到最大容量的百分比之后，进行扩容或缩小
     private int EXPANSION_PROBABILITY = 80;//不能大于100，大于100会导致数组无法扩容
     private int REDUCTION_PROBABILITY = 50;//不能大于REDUCTION_SIZE，否则会导致当前的栈内元素个数多于缩小后的数组大小，引起越界异常
@@ -13,8 +15,18 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
     private int REDUCTION_SIZE = 70;
     private double MAX_PROBABILITY = 100;//类型为double是为了计算的时候不需要再转换类型
 
+    public ArrayListImpl() {
+        array = (T[]) new Object[DEFAULT_CAPACITY];
+    }
+
     public ArrayListImpl(int size) {
-        array = (T[]) new Object[size];
+        if (size > 0) {
+            array = (T[]) new Object[size];
+        } else if (size == 0) {
+            array = (T[])empty_array;
+        } else {
+            System.out.println("初始容量错误");
+        }
     }
 
     @Override
@@ -99,15 +111,7 @@ public class ArrayListImpl<T> extends ArrayDynamicEx implements List<T> {
 
     @Override
     public boolean contains(T e) {
-        if (e == null || isEmpty()) {
-            return false;
-        }
-        for (int i = 0; i < size(); i++) {
-            if (array[i].equals(e)) {
-                return true;
-            }
-        }
-        return false;
+        return indexOf(e) >= 0;
     }
 
     @Override

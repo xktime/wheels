@@ -1,6 +1,10 @@
 package Funciton;
 
-public class ArrayDynamicEx {
+/**
+ * 动态扩展或缩小的数组继承类
+ *
+ */
+public abstract class ArrayDynamicEx {
 	/**
 	 * 调整数组大小
 	 *
