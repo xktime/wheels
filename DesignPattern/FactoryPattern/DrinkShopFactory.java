@@ -11,8 +11,8 @@ public class DrinkShopFactory {
                 return new CokeShopImpl();
             case "Coffee":
                 return new CoffeeShopImpl();
-            case "MilkTea":
-                return new MilkTeaShopImpl();
+            case "MilkyTea":
+                return new MilkyTeaShopImpl();
         }
         return null;
     }
