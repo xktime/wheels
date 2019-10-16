@@ -1,6 +1,6 @@
 package FactoryPattern;
 
-public class DrinkShop {
+public abstract class DrinkShop {
     String shopName = null;
 
     public void drink() {
