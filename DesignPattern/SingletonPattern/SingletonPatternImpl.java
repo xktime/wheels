@@ -1,13 +1,12 @@
 package SingletonPattern;
 
 public class SingletonPatternImpl {
-    private SingletonPatternImpl() {
-    }
-
     private static final Object lock = new Object();//锁定对象
 
     private static SingletonPatternImpl singletonPattern = null;
 
+    private SingletonPatternImpl() {
+    }
 
     public static SingletonPatternImpl getMe() {
         if (singletonPattern == null) {
