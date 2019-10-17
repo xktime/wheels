@@ -1,6 +1,8 @@
 package Stack;
 
 
+import List.*;
+
 public class LinkedListStackImpl<T> implements Stack<T> {
     private class Node {
         Node next;
@@ -43,19 +45,29 @@ public class LinkedListStackImpl<T> implements Stack<T> {
 
     @Override
     public String toString() {
-        //按出栈顺序打印，暂时先这样测试用；等之后写了反转字符串之后再来从新实现入栈顺序打印
+        //按入栈顺序打印
         StringBuilder str = new StringBuilder();
         if (isEmpty()) {
             return str.append('[').append(']').toString();
         }
         Node tempTop = top;
         str.append('[');
+        //按出栈顺序将元素放入数组
+        List<T> list = new ArrayListImpl<T>();
         while (tempTop.next != null) {
-            str.append(tempTop.element).append('、');
+            list.add(tempTop.element);
             tempTop = tempTop.next;
         }
-        //最后一个元素不加顿号
-        str.append(tempTop.element);
+        list.add(tempTop.element);
+        //将数组倒序输出
+        for (int i = list.size() - 1; i >= 0; i--) {
+            if (i != 0) {
+                str.append(list.get(i)).append('、');
+            } else {
+                //最后一个元素后面不加顿号
+                str.append(list.get(i));
+            }
+        }
         str.append(']');
         return str.toString();
     }

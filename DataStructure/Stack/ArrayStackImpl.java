@@ -55,6 +55,9 @@ public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
     public String toString() {
         //按入栈顺序打印
         StringBuilder str1 = new StringBuilder();
+        if (isEmpty()) {
+            return str1.append('[').append(']').toString();
+        }
         str1.append('[');
         for (int i = 0; i < topPoint; i++) {
             if (i != (topPoint - 1)) {
