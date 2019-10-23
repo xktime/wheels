@@ -17,7 +17,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     @Override
     public boolean remove(int value) {
-        //太不优雅了！！-0- 后面重构一下
         if (!contain(value)) {
             //不包含元素直接返回
             return false;
@@ -117,12 +116,13 @@ public class BinarySearchTreeImpl implements Tree {
             newNode.value = value;
             return newNode;
         }
+        //判断插入到左节点还是右节点
         if (value > node.value) {
             node.rChild = put(node.rChild, value);
         } else if (value < node.value) {
             node.lChild = put(node.lChild, value);
         }
-        //最后加的1是自身
+        //最后加的1是节点自己
         node.size = size(node.rChild) + size(node.lChild) + 1;
         return node;
     }

@@ -22,6 +22,7 @@ public abstract class ArrayDynamic {
     protected Object[] expationCapacity(Object[] array, int size) {
         //数组需要扩容的阈值
         double expansion = array.length * (EXPANSION_PROBABILITY / MAX_PROBABILITY);
+        //是否需要扩容
         if (size >= expansion) {
             double resizedSize = array.length * (EXPANSION_SIZE / MAX_PROBABILITY);
             array = resize(array, size, resizedSize);
@@ -39,6 +40,7 @@ public abstract class ArrayDynamic {
     protected Object[] trimCapacity(Object[] array, int size) {
         //数组需要缩小的阈值
         double reduction = array.length * (REDUCTION_PROBABILITY / MAX_PROBABILITY);
+        //是否需要缩小容量
         if (size < reduction) {
             double resizedSize = array.length * (REDUCTION_SIZE / MAX_PROBABILITY);
             if (size > resizedSize) {
