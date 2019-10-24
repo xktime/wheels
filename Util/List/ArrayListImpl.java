@@ -37,6 +37,16 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
     }
 
     @Override
+    public void addAll(T... e) {
+        if (e == null) {
+            return;
+        }
+        for (int i = 0; i < e.length; i++) {
+            add(e[i]);
+        }
+    }
+
+    @Override
     public boolean remove(T e) {
         //List没有这个元素或者List为空，返回false
         if (e == null || isEmpty() || !contains(e)) {

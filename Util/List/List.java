@@ -3,6 +3,8 @@ package List;
 public interface List<T> {
     boolean add(T e);//添加元素
 
+    void addAll(T...e);//添加所有元素
+
     boolean remove(T e);//删除元素
 
     void clear();//清空List
