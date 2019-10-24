@@ -6,16 +6,18 @@ public class ArrayListTest {
     public static void main(String[] args) {
         ArrayListImpl<Integer> arrayList = new ArrayListImpl<Integer>();
         System.out.println("=============添加元素===================");
-        arrayList.addAll(null);
-        arrayList.addAll(0,1,null,2,3,4,5,6,7,8,9);
+        arrayList.addAll(0,1,2,3,4,5,6,7,8,9);
         System.out.println(arrayList);
         System.out.println("ArrayList的元素个数为：" + arrayList.size());
         System.out.println("=============删除元素===================");
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 4; i++) {
             arrayList.remove(i);
             System.out.println("删除元素为：" + i);
             System.out.println(arrayList);
         }
+        System.out.println("ArrayList的元素个数为：" + arrayList.size());
+        System.out.println("=============清除所有元素===================");
+        arrayList.clear();
         System.out.println("ArrayList的元素个数为：" + arrayList.size());
         System.out.println("=============添加元素===================");
         //测试是否还能正常扩容

@@ -41,8 +41,8 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
         if (e == null) {
             return;
         }
-        for (int i = 0; i < e.length; i++) {
-            add(e[i]);
+        for (T anE : e) {
+            add(anE);
         }
     }
 
@@ -114,6 +114,15 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
     }
 
     @Override
+    public T[] toArray() {
+        T[] newArray = (T[])new Object[size()];
+        for (int i = 0; i < size(); i++) {
+            newArray[i] = get(i);
+        }
+        return newArray;
+    }
+
+    @Override
     public String toString() {
         StringBuilder str1 = new StringBuilder();
         str1.append('[');
@@ -129,8 +138,8 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
     }
 
     /**
-     * List数组的大小，测试用
-     * @return
+     * 测试用
+     * @return List数组的大小
      */
     public int length() {
         return array.length;
