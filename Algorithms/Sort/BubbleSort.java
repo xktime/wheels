@@ -9,7 +9,7 @@ import List.List;
 public class BubbleSort implements Sort {
     @Override
     public void sort(List<? extends Comparable> list) {
-        if (list == null) {
+        if (list == null || list.isEmpty()) {
             return;
         }
         for (int j = 0; j < list.size() - 1; j++) {
