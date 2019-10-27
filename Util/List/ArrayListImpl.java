@@ -32,7 +32,7 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
             return false;
         }
         array[rear++] = e;
-        array = (T[]) expantionCapacity(array, size());
+        array = (T[]) expandCapacity(array, size());
         return true;
     }
 

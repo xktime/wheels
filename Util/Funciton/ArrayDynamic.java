@@ -19,7 +19,7 @@ public abstract class ArrayDynamic {
      * @param size  数组的元素个数
      * @return
      */
-    protected Object[] expantionCapacity(Object[] array, int size) {
+    protected Object[] expandCapacity(Object[] array, int size) {
         //数组需要扩容的阈值
         double expansion = array.length * (EXPANSION_PROBABILITY / MAX_PROBABILITY);
         //是否需要扩容
