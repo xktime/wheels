@@ -30,7 +30,7 @@ public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
         }
         array[topPoint++] = element;
         //扩大容量
-        array = (T[]) expationCapacity(array, size());
+        array = (T[]) expantionCapacity(array, size());
     }
 
     @Override
