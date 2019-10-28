@@ -9,7 +9,10 @@ public class Collections {
 
 	//排序
 	public static void sort(List<? extends Comparable> list) {
-		Sort sort = new SelectionsSort();
+//		Sort sort = new SelectionsSort();
+//		Sort sort = new BubbleSort();
+//		Sort sort = new InsertSort();
+		Sort sort = new MergeSort();
 		sort.sort(list);
 	}
 

@@ -6,7 +6,7 @@ import List.List;
 /**
  * 冒泡排序
  */
-public class BubbleSort implements Sort {
+public class BubbleSort implements  Sort {
     @Override
     public void sort(List<? extends Comparable> list) {
         if (list == null || list.isEmpty()) {
