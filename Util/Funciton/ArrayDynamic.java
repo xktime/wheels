@@ -5,12 +5,12 @@ package Funciton;
  */
 public abstract class ArrayDynamic {
     //容量达到最大容量的百分比之后，进行扩容或缩小
-    private int EXPANSION_PROBABILITY = 80;//不能大于100，大于100会导致数组无法扩容
-    private int REDUCTION_PROBABILITY = 50;//不能大于REDUCTION_SIZE，否则会导致当前的栈内元素个数多于缩小后的数组大小，引起越界异常
+    private static final int EXPANSION_PROBABILITY = 80;//不能大于100，大于100会导致数组无法扩容
+    private static final int REDUCTION_PROBABILITY = 50;//不能大于REDUCTION_SIZE，否则会导致当前的栈内元素个数多于缩小后的数组大小，引起越界异常
     //扩大或缩小成当前最大容量的百分比
-    private int EXPANSION_SIZE = 150;
-    private int REDUCTION_SIZE = 70;
-    private double MAX_PROBABILITY = 100;//类型为double是为了计算的时候不需要再转换类型
+    private static final int EXPANSION_SIZE = 150;
+    private static final int REDUCTION_SIZE = 70;
+    private static final double MAX_PROBABILITY = 100;//类型为double是为了计算的时候不需要再转换类型
 
     /**
      * 扩大容量
