@@ -7,7 +7,7 @@ public class MergeSort implements Sort {
 
     @Override
     public void sort(List<? extends Comparable> list) {
-        if (list == null) {
+        if (list == null || list.isEmpty()) {
             return;
         }
         sort(list, 0, list.size() - 1);

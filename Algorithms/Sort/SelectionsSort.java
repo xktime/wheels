@@ -9,6 +9,9 @@ import List.List;
 public class SelectionsSort implements Sort {
 	@Override
 	public void sort(List<? extends Comparable> list) {
+		if (list == null || list.isEmpty()) {
+			return;
+		}
 		for (int j = 0; j < list.size() - 1; j++) {
 			int minIndex = j;//最小元素的下标
 			for (int k = minIndex + 1; k < list.size(); k++) {
