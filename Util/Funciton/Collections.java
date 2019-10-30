@@ -1,5 +1,6 @@
 package Funciton;
 
+import Enums.SortType;
 import List.*;
 import Sort.*;
 
@@ -7,12 +8,19 @@ import java.util.Random;
 
 public class Collections {
 
-	//排序
+	//排序(默认冒泡排序)
 	public static void sort(List<? extends Comparable> list) {
-//		Sort sort = new SelectionsSort();
-//		Sort sort = new BubbleSort();
-//		Sort sort = new InsertSort();
-		Sort sort = new MergeSort();
+		Sort sort = new BubbleSort();
+		sort.sort(list);
+	}
+
+	//排序（根据排序枚举取排序算法）
+	public static void sort(List<? extends Comparable> list, SortType sortType) {
+		SortFactory sortFactory = new SortFactory();
+		Sort sort = sortFactory.createSort(sortType.getSortName());
+		if (sort == null) {
+			return;
+		}
 		sort.sort(list);
 	}
 
@@ -62,4 +70,5 @@ public class Collections {
 		list.clear();
 		list.addAll(arr);
 	}
+
 }

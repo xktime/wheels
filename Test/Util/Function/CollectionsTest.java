@@ -1,5 +1,6 @@
 package Util.Function;
 
+import Enums.SortType;
 import Funciton.Collections;
 import List.ArrayListImpl;
 import List.List;
@@ -13,7 +14,7 @@ public class CollectionsTest {
 		Collections.shuffle(list);
 		System.out.println("=============打乱后===================");
 		System.out.println(list);
-		Collections.sort(list);
+		Collections.sort(list, SortType.INSERT_SORT);
 		System.out.println("=============排序后===================");
 		System.out.println(list);
 		System.out.println("=============反转后===================");
