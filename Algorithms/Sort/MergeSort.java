@@ -7,6 +7,9 @@ public class MergeSort implements Sort {
 
     @Override
     public void sort(List<? extends Comparable> list) {
+        if (list == null) {
+            return;
+        }
         sort(list, 0, list.size() - 1);
     }
 
@@ -15,7 +18,7 @@ public class MergeSort implements Sort {
      */
     private void sort(List<? extends Comparable> list, int low, int high) {
         if (list == null || low < 0 || high < 0) {
-            //异常返回
+            //异常跳出
             return;
         }
         if (low >= high) {
@@ -25,7 +28,7 @@ public class MergeSort implements Sort {
         int mid = low + (high - low) / 2;
         sort(list, low, mid);//对左边排序
         sort(list, mid + 1, high);//对右边排序
-        merger(list, low, mid, high);
+        merger(list, low, mid, high);//归并
     }
 
     /**
@@ -41,22 +44,24 @@ public class MergeSort implements Sort {
                 || mid > high) {
             return;
         }
-        //被归并的初始下标
-        int j = low;
-        int k = mid + 1;
-        Object[] arr = list.toArray();
+        int j = low;//前一个有序数组的初始下标
+        int k = mid + 1;//后一个有序数组的初始下标
+        Object[] temArr = list.toArray();//保存数据的临时数组
         for (int i = low; i <= high; i++) {
             if (j > mid) {
-                arr[i] = list.get(k++);
+                //如果前一个有序数组的数据已经全部放入
+                temArr[i] = list.get(k++);
             } else if (k > high) {
-                arr[i] = list.get(j++);
+                //如果后一个有序数组的数据已经全部放入
+                temArr[i] = list.get(j++);
             } else if (list.get(j).hashCode() < list.get(k).hashCode()) {
-                arr[i] = list.get(j++);
+                //使用hashCode来判定大小，Comparable泛型带不进来.....
+                temArr[i] = list.get(j++);
             } else {
-                arr[i] = list.get(k++);
+                temArr[i] = list.get(k++);
             }
         }
         list.clear();
-        list.addAll(arr);
+        list.addAll(temArr);
     }
 }
