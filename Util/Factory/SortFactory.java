@@ -1,4 +1,4 @@
-package Funciton;
+package Factory;
 
 import Sort.*;
 
