@@ -1,6 +1,7 @@
 package Funciton;
 
 import Enums.SortType;
+import Factory.SortFactory;
 import List.*;
 import Sort.*;
 
@@ -67,7 +68,7 @@ public class Collections {
                 || k >= list.size()) {
             return;
         }
-        //将list转换陈成数组
+        //将list转换成数组
         Object[] arr = list.toArray();
         //交换元素
         Object temp = arr[j];
