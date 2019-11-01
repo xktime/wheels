@@ -22,16 +22,16 @@ public class MergeSort implements Sort {
             //递归跳出条件
             return;
         }
-        int mid = low + (low + high) / 2;
+        int mid = low + (high - low) / 2;
         sort(list, low, mid);//对左边排序
-        sort(list, mid + 1, high);//对邮编排序
+        sort(list, mid + 1, high);//对右边排序
         merger(list, low, mid, high);
     }
 
     /**
      * 将list[low..mid]和list[mid+1..high]归并
      */
-    private void merger(List<? extends Comparable> list, int low, int mid, int high) {
+    private void merger(List list, int low, int mid, int high) {
         if (list == null
                 || low < 0
                 || mid < 0
@@ -44,21 +44,19 @@ public class MergeSort implements Sort {
         //被归并的初始下标
         int j = low;
         int k = mid + 1;
-        List temList = new ArrayListImpl();
-        for (int i = 0; i < list.size(); i++) {
-            temList.add(list.get(i));
-        }
-        list.clear();
+        Object[] arr = list.toArray();
         for (int i = low; i <= high; i++) {
             if (j > mid) {
-                list.add(temArr[k++]);
+                arr[i] = list.get(k++);
             } else if (k > high) {
-                list.add(temArr[j++]);
-            } else if (temArr[j].compareTo(temArr[k]) < 0) {
-                list.add(temArr[j++]);
+                arr[i] = list.get(j++);
+            } else if (list.get(j).hashCode() < list.get(k).hashCode()) {
+                arr[i] = list.get(j++);
             } else {
-                list.add(temArr[k++]);
+                arr[i] = list.get(k++);
             }
         }
+        list.clear();
+        list.addAll(arr);
     }
 }
