@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class DoublyLinkedListImpl<T> implements LinkedList<T> {
-    class Node {
+    private class Node {
         Node prior;
         Node next;
         T element;

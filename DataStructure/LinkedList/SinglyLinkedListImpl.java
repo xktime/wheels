@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class SinglyLinkedListImpl<T> implements LinkedList<T> {
-    class Node {
+    private class Node {
         Node next;
         T element;
     }
