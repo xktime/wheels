@@ -29,8 +29,8 @@ public class ArrayListTest {
         System.out.println("=============查找元素===================");
         for (int i = 8; i < 11; i++) {
             System.out.println("ArrayList是否包含元素 "+ i +"：" + arrayList.contains(i));
-            System.out.println("元素:"+ i +" 在ArrayList的第" + arrayList.indexOf(i) + "位");
-            System.out.println("ArrayList的第" + i + "位是元素：" + arrayList.get(i));
+            System.out.println("元素:"+ i +" 在ArrayList的下标：" + arrayList.indexOf(i) + "处");
+            System.out.println("ArrayList的下标：" + i + "处是元素：" + arrayList.get(i));
             System.out.println("-------------------------------------");
         }
     }

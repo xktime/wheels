@@ -28,7 +28,7 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
             return false;
         }
         if (size() > (array.length - 1)) {
-            System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
+            System.out.println("数组已满，ArrayDynamic的EXPANSION_PROBABILITY不能大于100");
             return false;
         }
         array[rear++] = e;
