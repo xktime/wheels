@@ -12,22 +12,19 @@ public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
         array = (T[]) new Object[DEFAULT_CAPACITY];
     }
 
+
     public ArrayStackImpl(int size) {
         if (size > 0) {
             array = (T[]) new Object[size];
         } else if (size == 0) {
             array = (T[]) empty_array;
         } else {
-            System.out.println("初始容量错误");
+            throw new IllegalArgumentException("初始容量错误");
         }
     }
 
     @Override
     public void push(T element) {
-        if (size() > (array.length - 1)) {
-            System.out.println("数组已满，EXPANSION_PROBABILITY不能大于100");
-            return;
-        }
         array[topPoint++] = element;
         //扩大容量
         array = (T[]) expandCapacity(array, size());

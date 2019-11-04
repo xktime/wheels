@@ -18,17 +18,13 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
         } else if (size == 0) {
             array = (T[])empty_array;
         } else {
-            System.out.println("初始容量错误");
+            throw new IllegalArgumentException("初始容量错误");
         }
     }
 
     @Override
     public boolean add(T e) {
         if (e == null) {
-            return false;
-        }
-        if (size() > (array.length - 1)) {
-            System.out.println("数组已满，ArrayDynamic的EXPANSION_PROBABILITY不能大于100");
             return false;
         }
         array[rear++] = e;

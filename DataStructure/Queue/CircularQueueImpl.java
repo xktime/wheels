@@ -9,7 +9,7 @@ public class CircularQueueImpl<T> implements Queue<T> {
         if (size > 0) {
             array = (T[]) new Object[size];
         } else {
-            System.out.println("初始容量错误");
+            throw new IllegalArgumentException("初始容量错误");
         }
     }
 
