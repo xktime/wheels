@@ -2,12 +2,18 @@ package LinkedList;
 
 public class DoublyLinkedListImpl<T> implements LinkedList<T> {
     private class Node {
-        Node prior;
+        Node prev;
         Node next;
         T element;
+
+        Node(Node prev, Node next, T element) {
+            this.prev = prev;
+            this.next = next;
+            this.element = element;
+        }
     }
 
-    private Node head = new Node();//头结点
+    private Node head = new Node(null, null, null);//头结点
     private int size = 0;
 
     @Override
@@ -17,10 +23,8 @@ public class DoublyLinkedListImpl<T> implements LinkedList<T> {
         while (node.next != null) {
             node = node.next;
         }
-        Node newNode = new Node();
-        newNode.element = e;
+        Node newNode = new Node(node, null, e);
         node.next = newNode;
-        newNode.prior = node;
         size++;
     }
 
@@ -39,13 +43,10 @@ public class DoublyLinkedListImpl<T> implements LinkedList<T> {
             }
             oldNode = oldNode.next;
         }
-        Node priorNode = oldNode.prior;
-        Node newNode = new Node();
-        newNode.element = e;
-        newNode.next = oldNode;
-        newNode.prior = priorNode;
+        Node priorNode = oldNode.prev;
+        Node newNode = new Node(priorNode, oldNode, e);
         priorNode.next = newNode;
-        oldNode.prior = newNode;
+        oldNode.prev = newNode;
         size++;
     }
 
@@ -68,10 +69,10 @@ public class DoublyLinkedListImpl<T> implements LinkedList<T> {
             }
             oldNode = oldNode.next;
         }
-        oldNode.prior.next = oldNode.next;
+        oldNode.prev.next = oldNode.next;
         if (size != index) {
             //最后一个元素没有next
-            oldNode.next.prior = oldNode.prior;
+            oldNode.next.prev = oldNode.prev;
         }
         size--;
         return oldNode.element;
