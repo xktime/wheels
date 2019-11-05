@@ -2,7 +2,7 @@ package List;
 
 import Funciton.ArrayDynamic;
 
-public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
+public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
     private T[] array;
     private static final Object[]  empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
@@ -28,7 +28,7 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
             return false;
         }
         array[rear++] = e;
-        array = (T[]) expandCapacity(array, size());
+        array =  expandCapacity(array, size());
         return true;
     }
 
@@ -58,7 +58,7 @@ public class ArrayListImpl<T> extends ArrayDynamic implements List<T> {
                     }
                 }
                 rear--;
-                array = (T[]) trimCapacity(array, size());
+                array = trimCapacity(array, size());
                 return true;
             }
         }

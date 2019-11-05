@@ -2,7 +2,7 @@ package Stack;
 
 import Funciton.ArrayDynamic;
 
-public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
+public class ArrayStackImpl<T> extends ArrayDynamic<T> implements Stack<T> {
     private T[] array;
     private static final Object[] empty_array = {}; //用于空实例
     private int topPoint = 0;//栈顶指针
@@ -27,7 +27,7 @@ public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
     public void push(T element) {
         array[topPoint++] = element;
         //扩大容量
-        array = (T[]) expandCapacity(array, size());
+        array = expandCapacity(array, size());
     }
 
     @Override
@@ -38,7 +38,7 @@ public class ArrayStackImpl<T> extends ArrayDynamic implements Stack<T> {
         }
         T element = array[--topPoint];
         //缩小容量
-        array = (T[]) trimCapacity(array, size());
+        array = trimCapacity(array, size());
         return element;
     }
 
