@@ -75,7 +75,6 @@ public class CircularQueueImpl<T> implements Queue<T> {
 
     /**
      * 获取队头下标
-     * @return
      */
     private int getFront() {
         return front % array.length;
@@ -83,7 +82,6 @@ public class CircularQueueImpl<T> implements Queue<T> {
 
     /**
      * 获取队尾下标
-     * @return
      */
     private int getRear() {
         return rear % array.length;
@@ -91,7 +89,6 @@ public class CircularQueueImpl<T> implements Queue<T> {
 
     /**
      * 队列是否满了
-     * @return
      */
     private boolean isFull() {
         return (rear - front) % array.length + 1 == array.length;

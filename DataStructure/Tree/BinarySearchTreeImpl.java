@@ -106,7 +106,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归插入元素
-     *
      */
     private Node put(Node node, int value) {
         if (node == null) {
@@ -129,7 +128,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归查找元素
-     *
      */
     private Node find(Node node, int value) {
         if (node == null) {
@@ -148,7 +146,6 @@ public class BinarySearchTreeImpl implements Tree {
 
     /**
      * 递归查找元素的双亲节点
-     *
      */
     private Node findParentNode(Node node, int value) {
         if (node == null) {
@@ -219,7 +216,7 @@ public class BinarySearchTreeImpl implements Tree {
     /**
      * 对打印的字符串格式化
      *
-     * @param s   在字符前插入字符
+     * @param s 在字符前插入字符
      */
     private void formatString(StringBuilder str, String s) {
         int index = str.lastIndexOf("、");

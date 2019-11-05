@@ -53,15 +53,15 @@ public abstract class ArrayDynamic<T> {
     /**
      * 调整数组大小
      *
-     * @param array          需要调整大小的数组
-     * @param size          数组的元素个数。因为数组之后的元素没有删除，需要确定数组的元素个数
-     * @param resizedSize  需要将数组调整到的大小
-     * @return            调整之后的数组
+     * @param array       需要调整大小的数组
+     * @param size        数组的元素个数。因为数组之后的元素没有删除，需要确定数组的元素个数
+     * @param resizedSize 需要将数组调整到的大小
+     * @return 调整之后的数组
      */
     private T[] resize(T[] array, int size, double resizedSize) {
         //缩小时向上取整是因为向下取整可能导致容量被resize为0
         //扩容时向上取整是因为如果如果实际容量为1之后.会一直为1,增加元素之后不会再继续扩容
-        T[] tempArr = (T[])new Object[ceil(resizedSize)];
+        T[] tempArr = (T[]) new Object[ceil(resizedSize)];
         for (int i = 0; i < size; i++) {
             tempArr[i] = array[i];
         }
@@ -70,7 +70,6 @@ public abstract class ArrayDynamic<T> {
 
     /**
      * 向上取整
-     *
      */
     private int ceil(double value) {
         return (int) value + 1;

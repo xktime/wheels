@@ -4,7 +4,7 @@ import Funciton.ArrayDynamic;
 
 public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
     private T[] array;
-    private static final Object[]  empty_array = {}; //用于空实例
+    private static final Object[] empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
     private final int DEFAULT_CAPACITY = 10;//List默认大小
 
@@ -16,7 +16,7 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
         if (size > 0) {
             array = (T[]) new Object[size];
         } else if (size == 0) {
-            array = (T[])empty_array;
+            array = (T[]) empty_array;
         } else {
             throw new IllegalArgumentException("初始容量错误");
         }
@@ -28,7 +28,7 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
             return false;
         }
         array[rear++] = e;
-        array =  expandCapacity(array, size());
+        array = expandCapacity(array, size());
         return true;
     }
 
@@ -111,7 +111,7 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
 
     @Override
     public T[] toArray() {
-        T[] newArray = (T[])new Object[size()];
+        T[] newArray = (T[]) new Object[size()];
         for (int i = 0; i < size(); i++) {
             newArray[i] = get(i);
         }
@@ -135,6 +135,7 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
 
     /**
      * 测试用
+     *
      * @return List数组的大小
      */
     public int length() {
