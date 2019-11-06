@@ -5,7 +5,7 @@ package Funciton;
  */
 public abstract class ArrayDynamic<T> {
     //容量达到最大容量的百分比之后，进行扩容或缩小
-    private static final int EXPANSION_PROBABILITY = 80;//不能大于100，大于100会导致数组无法扩容
+    private static final int EXPANSION_PROBABILITY = 75;//不能大于100，大于100会导致数组无法扩容
     private static final int REDUCTION_PROBABILITY = 50;//不能大于REDUCTION_SIZE，否则会导致当前的栈内元素个数多于缩小后的数组大小，引起越界异常
     //扩大或缩小成当前最大容量的百分比
     private static final int EXPANSION_SIZE = 150;
@@ -58,7 +58,7 @@ public abstract class ArrayDynamic<T> {
      * @param resizedSize 需要将数组调整到的大小
      * @return 调整之后的数组
      */
-    private T[] resize(T[] array, int size, double resizedSize) {
+    protected T[] resize(T[] array, int size, double resizedSize) {
         //缩小时向上取整是因为向下取整可能导致容量被resize为0
         //扩容时向上取整是因为如果如果实际容量为1之后.会一直为1,增加元素之后不会再继续扩容
         T[] tempArr = (T[]) new Object[ceil(resizedSize)];
@@ -71,7 +71,7 @@ public abstract class ArrayDynamic<T> {
     /**
      * 向上取整
      */
-    private int ceil(double value) {
+    protected int ceil(double value) {
         return (int) value + 1;
     }
 }
