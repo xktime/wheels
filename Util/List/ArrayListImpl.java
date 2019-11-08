@@ -2,7 +2,11 @@ package List;
 
 import Funciton.ArrayDynamic;
 
-public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
+
+public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T>,Iterable {
     private T[] array;
     private static final Object[] empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
@@ -140,5 +144,20 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
      */
     public int length() {
         return array.length;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+
+    }
+
+    @Override
+    public Spliterator spliterator() {
+        return null;
     }
 }

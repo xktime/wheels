@@ -4,7 +4,7 @@ import Funciton.ArrayDynamic;
 
 /**
  * 简易HashMap实现
- * 具体散列算法等多研究源码之后再来完善
+ * 散列算法和动态调整等功能，多看看源码之后再来完善
  */
 public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
@@ -62,7 +62,6 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     @Override
     public void putAll(Map<? extends K, ? extends V> map) {
-
     }
 
     @Override
@@ -88,6 +87,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
                             && (key == null ? node.next.key == null : key.equals(node.next.key))) {
                         node.next = node.next.next;
                         size--;
+                        break;
                     }
                     node = node.next;
                 }
@@ -121,6 +121,17 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder str1 = new StringBuilder();
+        for (int i = 0; i < table.length; i++) {
+            for (Node node = table[i]; node != null; node = node.next) {
+                str1.append('[').append(node.key).append(',').append(node.value).append(']');
+            }
+        }
+        return str1.toString();
     }
 
     /**
