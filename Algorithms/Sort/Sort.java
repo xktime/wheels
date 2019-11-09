@@ -1,6 +1,6 @@
 package Sort;
 
-import List.List;
+import Collection.List.List;
 
 public interface Sort {
     void sort(List<? extends Comparable> list);

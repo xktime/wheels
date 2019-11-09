@@ -1,8 +1,5 @@
 package Stack;
 
-
-import List.*;
-
 public class LinkedListStackImpl<T> implements Stack<T> {
     private class Node {
         Node next;
@@ -53,19 +50,17 @@ public class LinkedListStackImpl<T> implements Stack<T> {
         Node tempTop = top;
         str.append('[');
         //按出栈顺序将元素放入数组
-        List<T> list = new ArrayListImpl<T>();
-        while (tempTop.next != null) {
-            list.add(tempTop.element);
-            tempTop = tempTop.next;
+        T[] tempArr = (T[])new Object[size];
+        for (int i = 0; i < size; i++) {
+            tempArr[i] = tempTop.element;
         }
-        list.add(tempTop.element);
         //将数组倒序输出
-        for (int i = list.size() - 1; i >= 0; i--) {
+        for (int i = tempArr.length - 1; i >= 0; i--) {
             if (i != 0) {
-                str.append(list.get(i)).append('、');
+                str.append(tempArr[i]).append('、');
             } else {
                 //最后一个元素后面不加顿号
-                str.append(list.get(i));
+                str.append(tempArr[i]);
             }
         }
         str.append(']');

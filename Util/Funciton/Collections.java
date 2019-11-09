@@ -1,9 +1,10 @@
 package Funciton;
 
+import Collection.List.List;
 import Enums.SortType;
 import Factory.SortFactory;
-import List.*;
-import Sort.*;
+import Sort.BubbleSort;
+import Sort.Sort;
 
 import java.util.Random;
 

@@ -1,6 +1,7 @@
 package Util.Map;
 
-import Map.*;
+import Map.HashMapImpl;
+import Map.Map;
 
 public class HashMapTest {
     public static void main(String[] args) {

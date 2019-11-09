@@ -1,6 +1,6 @@
 package Util.Function;
 
-import List.*;
+import Collection.List.ArrayListImpl;
 
 public class ArrayDynamicTest {
     public static void main(String[] args) {

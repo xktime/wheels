@@ -1,6 +1,6 @@
 package Sort;
 
-import List.*;
+import Collection.List.List;
 
 public class MergeSort implements Sort {
 

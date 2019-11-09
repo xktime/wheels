@@ -1,6 +1,6 @@
-package Util.List;
+package Util.Collection.List;
 
-import List.ArrayListImpl;
+import Collection.List.ArrayListImpl;
 
 public class ArrayListTest {
     public static void main(String[] args) {

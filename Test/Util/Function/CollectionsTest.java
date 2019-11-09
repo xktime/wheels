@@ -2,12 +2,12 @@ package Util.Function;
 
 import Enums.SortType;
 import Funciton.Collections;
-import List.ArrayListImpl;
-import List.List;
+import Collection.List.LinkedListImpl;
+import Collection.List.List;
 
 public class CollectionsTest {
 	public static void main(String[] args) {
-		List<Character> list = new ArrayListImpl<Character>();
+		List<Character> list = new LinkedListImpl<Character>();
 		list.addAll('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h');
 		System.out.println("=============打乱前===================");
 		System.out.println(list);

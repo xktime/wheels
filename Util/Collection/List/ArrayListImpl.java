@@ -1,4 +1,4 @@
-package List;
+package Collection.List;
 
 import Funciton.ArrayDynamic;
 

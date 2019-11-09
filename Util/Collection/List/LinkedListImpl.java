@@ -1,4 +1,4 @@
-package List;
+package Collection.List;
 
 public class LinkedListImpl<T> implements List<T> {
 

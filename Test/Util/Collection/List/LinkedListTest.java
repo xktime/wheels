@@ -1,6 +1,7 @@
-package Util.List;
+package Util.Collection.List;
 
-import List.*;
+import Collection.List.LinkedListImpl;
+import Collection.List.List;
 
 public class LinkedListTest {
     public static void main(String[] args) {

@@ -60,9 +60,6 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         size++;
     }
 
-    @Override
-    public void putAll(Map<? extends K, ? extends V> map) {
-    }
 
     @Override
     public V get(K key) {

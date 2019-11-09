@@ -1,7 +1,7 @@
 package Sort;
 
 import Funciton.Collections;
-import List.List;
+import Collection.List.List;
 
 /**
  * 插入排序
