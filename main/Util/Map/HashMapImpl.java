@@ -4,7 +4,6 @@ import Util.Funciton.ArrayDynamic;
 
 /**
  * 简易HashMap实现
- * 散列算法和动态调整等功能，多看看源码之后再来完善
  */
 public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
@@ -22,8 +21,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         }
     }
 
-    private final static int DEFAULT_SIZE = 16;//默认大小
+    private static final int DEFAULT_SIZE = 16;//默认大小
     private static final float EXPANSION_PROBABILITY = 0.75f;//负载因子
+    private int length = 16;
     private Node<K, V>[] table;//桶表
     private int size = 0;
 
@@ -33,31 +33,43 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     @Override
     public void put(K key, V value) {
+        put(table, key, value);
+        if (size > length * EXPANSION_PROBABILITY) {
+            table = (Node<K, V>[]) resize(table, size, length << 1);
+        }
+    }
+
+    private void put(Node<K, V>[] arr, K key, V value) {
         int hash = hash(key);
         Node newNode = new Node(null, key, value, key == null ? 0 : key.hashCode());
-        Node oldNode = table[hash];
+        if (hash >= arr.length) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node oldNode = arr[hash];
         if (oldNode == null) {
             //如果桶内没有元素,直接放入
-            table[hash] = newNode;
+            arr[hash] = newNode;
+            size++;
         } else {
             //如果桶内有元素,需要判定key是否相同
-            //如果没有相同的key在链表末尾放入
             while (oldNode != null) {
                 //需要判断key为空的情况
                 if (oldNode.hash == (key == null ? 0 : key.hashCode())
                         && (key == null ? oldNode.key == null : key.equals(oldNode.key))) {
+                    //Map中有Key的情况
                     oldNode.value = value;
                     break;
                 }
                 if (oldNode.next != null) {
                     oldNode = oldNode.next;
                 } else {
+                    //如果没有相同的key在链表末尾放入
                     oldNode.next = newNode;
+                    size++;
                     break;
                 }
             }
         }
-        size++;
     }
 
 
@@ -137,6 +149,18 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         return str1.toString();
     }
 
+    @Override
+    protected Object[] resize(Object[] array, int size, double resizedSize) {
+        length = (int) resizedSize;
+        Node[] tempArr = new Node[length];
+        for (int i = 0; i < table.length; i++) {
+            for (Node node = table[i]; node != null; node = node.next) {
+                put(tempArr, (K) node.key, (V) node.value);
+            }
+        }
+        return tempArr;
+    }
+
     /**
      * 获取key的散列值
      */
@@ -144,7 +168,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         if (key == null) {
             return 0;
         }
-        return key.hashCode() % table.length;
+        return key.hashCode() % length;
     }
 
     private Node<K, V> getNode(int hash, K key) {
