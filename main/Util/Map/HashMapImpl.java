@@ -34,27 +34,22 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     public void put(K key, V value) {
         put(table, key, value);
-        if (size > length * EXPANSION_PROBABILITY) {
-            table = (Node<K, V>[]) resize(table, size, length << 1);
-        }
     }
 
     private void put(Node<K, V>[] arr, K key, V value) {
         int hash = hash(key);
-        Node newNode = new Node(null, key, value, key == null ? 0 : key.hashCode());
-        if (hash >= arr.length) {
-            throw new IndexOutOfBoundsException();
-        }
-        Node oldNode = arr[hash];
+        Node newNode = new Node(null, key, value, key == null ? 0 : hash);
+        int index = hash & (length - 1);
+        Node oldNode = arr[index];
         if (oldNode == null) {
             //如果桶内没有元素,直接放入
-            arr[hash] = newNode;
+            arr[index] = newNode;
             size++;
         } else {
             //如果桶内有元素,需要判定key是否相同
             while (oldNode != null) {
                 //需要判断key为空的情况
-                if (oldNode.hash == (key == null ? 0 : key.hashCode())
+                if (oldNode.hash == (key == null ? 0 : hash)
                         && (key == null ? oldNode.key == null : key.equals(oldNode.key))) {
                     //Map中有Key的情况
                     oldNode.value = value;
@@ -70,6 +65,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
                 }
             }
         }
+        if (size > length * EXPANSION_PROBABILITY) {
+            table = (Node<K, V>[]) resize(table, size, length << 1);
+        }
     }
 
 
@@ -82,17 +80,18 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     public void remove(K key) {
         int hash = hash(key);
-        Node node = table[hash];
+        int index = hash & (length - 1);
+        Node node = table[index];
         if (node != null) {
             //如果链头就是要删除的元素
-            if (node.hash == (key == null ? 0 : key.hashCode())
+            if (node.hash == (key == null ? 0 : hash)
                     && (key == null ? node.key == null : key.equals(node.key))) {
-                table[hash] = node.next;
+                table[index] = node.next;
                 size--;
             } else {
                 //如果要删除的元素在后面
                 while (node.next != null) {
-                    if (node.next.hash == (key == null ? 0 : key.hashCode())
+                    if (node.next.hash == (key == null ? 0 : hash)
                             && (key == null ? node.next.key == null : key.equals(node.next.key))) {
                         node.next = node.next.next;
                         size--;
@@ -152,6 +151,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     protected Object[] resize(Object[] array, int size, double resizedSize) {
         length = (int) resizedSize;
+        this.size = 0;//先给size置0
         Node[] tempArr = new Node[length];
         for (int i = 0; i < table.length; i++) {
             for (Node node = table[i]; node != null; node = node.next) {
@@ -168,13 +168,15 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         if (key == null) {
             return 0;
         }
-        return key.hashCode() % length;
+        int h = key.hashCode();
+        //混合高位和低位，确保计算散列时高位和低位都起到作用
+        return h ^ (h >> 16);
     }
 
     private Node<K, V> getNode(int hash, K key) {
-        Node<K, V> oldNode = table[hash];
+        Node<K, V> oldNode = table[hash & (length - 1)];
         while (oldNode != null) {
-            if (oldNode.hash == (key == null ? 0 : key.hashCode())
+            if (oldNode.hash == (key == null ? 0 : hash)
                     && (key == null ? oldNode.key == null : key.equals(oldNode.key))) {
                 return oldNode;
             }
