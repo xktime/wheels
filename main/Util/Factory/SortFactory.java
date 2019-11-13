@@ -1,5 +1,6 @@
 package Util.Factory;
 
+import Algorithms.Enums.SortType;
 import Algorithms.Sort.*;
 
 /**
@@ -7,19 +8,19 @@ import Algorithms.Sort.*;
  */
 public class SortFactory {
 
-    public Sort createSort(String sortName) {
-        if (sortName == null) {
-            return null;
-        }
-        switch (sortName) {
-            case "BubbleSort":
+    public Sort createSort(SortType sortType) {
+        switch (sortType) {
+            case BUBBLE_SORT:
                 return new BubbleSort();
-            case "InsertSort":
+            case INSERT_SORT:
                 return new InsertSort();
-            case "MergeSort":
+            case MERGE_SORT:
                 return new MergeSort();
-            case "SelectionsSort":
+            case SELECTIONS_SORT:
                 return new SelectionsSort();
+            case QUICK_SORT:
+                return new QuickSort();
+
         }
         return null;
     }

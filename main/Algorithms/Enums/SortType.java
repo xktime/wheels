@@ -5,6 +5,7 @@ public enum SortType {
     INSERT_SORT("InsertSort"),
     MERGE_SORT("MergeSort"),
     SELECTIONS_SORT("SelectionsSort"),
+    QUICK_SORT("QuickSort"),
     ;
 
     private String sortName;

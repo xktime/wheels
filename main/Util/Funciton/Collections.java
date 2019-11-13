@@ -25,7 +25,7 @@ public class Collections {
             return;
         }
         SortFactory sortFactory = new SortFactory();
-        Sort sort = sortFactory.createSort(sortType.getSortName());
+        Sort sort = sortFactory.createSort(sortType);
         if (sort == null) {
             return;
         }
