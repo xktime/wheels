@@ -20,7 +20,8 @@ public class SortFactory {
                 return new SelectionsSort();
             case QUICK_SORT:
                 return new QuickSort();
-
+            case QUICK_3_WAY_SORT:
+                return new Quick3WaySort();
         }
         return null;
     }
