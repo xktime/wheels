@@ -1,5 +1,7 @@
 package Util.Collection.List;
 
+import java.util.Iterator;
+
 public class LinkedListImpl<T> implements List<T> {
 
     private class Node {
@@ -221,5 +223,26 @@ public class LinkedListImpl<T> implements List<T> {
 
     private boolean isPositionIndex(int index) {
         return index >= 0 && index <= size();
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new Itr();
+    }
+
+    private class Itr implements Iterator<T> {
+        Node node = first;
+
+        @Override
+        public boolean hasNext() {
+            return node != null;
+        }
+
+        @Override
+        public T next() {
+            T e = node.element;
+            node = node.next;
+            return e;
+        }
     }
 }

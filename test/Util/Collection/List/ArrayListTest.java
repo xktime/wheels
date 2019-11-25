@@ -31,5 +31,9 @@ public class ArrayListTest {
             System.out.println("ArrayList的下标：" + i + "处是元素：" + arrayList.get(i));
             System.out.println("-------------------------------------");
         }
+        System.out.println("=============测试Iterator，使用foreach遍历===================");
+        for (Object i : arrayList) {
+            System.out.print(i + " ");
+        }
     }
 }

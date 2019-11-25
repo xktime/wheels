@@ -42,5 +42,9 @@ public class LinkedListTest {
             System.out.println("LinkedList的下标：" + i + "处是元素：" + linkedList.get(i));
             System.out.println("-------------------------------------");
         }
+        System.out.println("=============测试Iterator，使用foreach遍历===================");
+        for (Object i : linkedList) {
+            System.out.print(i + " ");
+        }
     }
 }

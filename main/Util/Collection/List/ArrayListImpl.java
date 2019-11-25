@@ -3,10 +3,8 @@ package Util.Collection.List;
 import Util.Funciton.ArrayDynamic;
 
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
-public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T>,Iterable {
+public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
     private T[] array;
     private static final Object[] empty_array = {}; //用于空实例
     private int rear = 0;//队尾指针
@@ -148,16 +146,20 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T>,Iterabl
 
     @Override
     public Iterator iterator() {
-        return null;
+        return new Itr();
     }
 
-    @Override
-    public void forEach(Consumer action) {
+    private class Itr implements Iterator<T> {
+        int index = 0;
 
-    }
+        @Override
+        public boolean hasNext() {
+            return index < size();
+        }
 
-    @Override
-    public Spliterator spliterator() {
-        return null;
+        @Override
+        public T next() {
+            return array[index++];
+        }
     }
 }

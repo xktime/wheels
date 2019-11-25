@@ -1,6 +1,6 @@
 package Util.Collection;
 
-public interface Collection<T> {
+public interface Collection<T> extends Iterable<T> {
     boolean add(T element);//添加元素
 
     void addAll(T...elements);//添加所有元素
