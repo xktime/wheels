@@ -30,5 +30,10 @@ public class HashMapTest {
         map.remove(null);
         System.out.println(map);
         System.out.println("Map的元素个数为：" + map.size());
+        System.out.println("====================================");
+        System.out.println("Map是否包含Key为" + "12:" + map.containsKey(12));
+        System.out.println("Map是否包含Key为" + "null:" + map.containsKey(null));
+        System.out.println("Map是否包含Value为" + "12:" + map.containsValue(12));
+        System.out.println("Map是否包含Value为" + "null:" + map.containsValue(null));
     }
 }

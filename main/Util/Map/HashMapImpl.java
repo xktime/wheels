@@ -106,7 +106,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     public boolean containsKey(K key) {
         Node<K, V> oldNode = getNode(hash(key), key);
-        return oldNode == null;
+        return oldNode != null;
     }
 
     @Override
