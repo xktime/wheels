@@ -14,4 +14,14 @@ public interface Map<K, V> {
     int size();//Map大小
 
     boolean isEmpty();//Map是否为空
+
+    interface Entry<K, V> {
+        K getKey();
+
+        V getValue();
+
+        void setKey(K k);
+
+        void setValue(V v);
+    }
 }

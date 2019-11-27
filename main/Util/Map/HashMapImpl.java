@@ -7,17 +7,37 @@ import Util.Funciton.ArrayDynamic;
  */
 public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
-    private class Node<K, V> {
-        Node next;
-        K key;
-        V value;
-        int hash;
+    private class Node<K, V> implements Entry<K, V> {
+        private Node next;
+        private K key;
+        private V value;
+        private int hash;
 
         Node(Node next, K key, V value, int hash) {
             this.next = next;
             this.key = key;
             this.value = value;
             this.hash = hash;
+        }
+
+        @Override
+        public K getKey() {
+            return key;
+        }
+
+        @Override
+        public V getValue() {
+            return value;
+        }
+
+        @Override
+        public void setKey(K key) {
+            this.key = key;
+        }
+
+        @Override
+        public void setValue(V value) {
+            this.value = value;
         }
     }
 
@@ -184,4 +204,5 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         }
         return null;
     }
+
 }
