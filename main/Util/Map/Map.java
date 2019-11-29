@@ -13,6 +13,8 @@ public interface Map<K, V> {
 
     int size();//Map大小
 
+    void clear();
+
     boolean isEmpty();//Map是否为空
 
     interface Entry<K, V> {

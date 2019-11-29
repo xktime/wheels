@@ -1,6 +1,9 @@
 package Util.Map;
 
+import Util.Collection.Set.Set;
 import Util.Funciton.ArrayDynamic;
+
+import java.util.Iterator;
 
 /**
  * 简易HashMap实现
@@ -147,6 +150,13 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     }
 
     @Override
+    public void clear() {
+        for (int i = 0; i < table.length; i++) {
+            table[i] = null;
+        }
+    }
+
+    @Override
     public boolean isEmpty() {
         return size == 0;
     }
@@ -184,7 +194,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     /**
      * 获取key的散列值
      */
-    private int hash(K key) {
+    private int hash(Object key) {
         if (key == null) {
             return 0;
         }
@@ -193,7 +203,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         return h ^ (h >> 16);
     }
 
-    private Node<K, V> getNode(int hash, K key) {
+    private Node<K, V> getNode(int hash, Object key) {
         Node<K, V> oldNode = table[hash & (length - 1)];
         while (oldNode != null) {
             if (oldNode.hash == (key == null ? 0 : hash)
@@ -205,4 +215,66 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         return null;
     }
 
+    public Set<Entry<K, V>> entrySet(){
+        return new EntrySet();
+    }
+
+    private class EntrySet implements Set {
+
+        @Override
+        public boolean add(Object element) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void addAll(Object[] elements) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean remove(Object element) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void clear() {
+            HashMapImpl.this.clear();
+        }
+
+        @Override
+        public boolean contains(Object element) {
+            if (!(element instanceof Entry)) {
+                return false;
+            }
+            Entry e = (Entry)element;
+            Node n = getNode(hash(e.getKey()), e.getKey());
+            if (n != null) {
+                return e.getValue() == null ? n.getValue() == null : e.getValue().equals(n.getValue());
+            }
+            return false;
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return size == 0;
+        }
+
+        @Override
+        public int size() {
+            return size;
+        }
+
+        @Override
+        public Object[] toArray() {
+            return new Object[0];
+        }
+
+        @Override
+        public Iterator iterator() {
+            return null;
+        }
+    }
+    private class HashItr{
+
+    }
 }
