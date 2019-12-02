@@ -1,5 +1,6 @@
 package Util.Map;
 
+import Util.Collection.List.List;
 import Util.Collection.Set.Set;
 
 public class HashMapTest {
@@ -26,22 +27,37 @@ public class HashMapTest {
         System.out.println("key为null的value为" + map.get(null));
         System.out.println("Map的元素个数为：" + map.size());
         System.out.println("=============删除元素===================");
-        for (int i = 0; i <= 11; i++) {
+        for (int i = 0; i <= 16; i++) {
             map.remove(i);
         }
         map.remove(null);
         System.out.println(map);
         System.out.println("Map的元素个数为：" + map.size());
         System.out.println("====================================");
-        System.out.println("Map是否包含Key为" + "12:" + map.containsKey(12));
+        System.out.println("Map是否包含Key为" + "18:" + map.containsKey(18));
         System.out.println("Map是否包含Key为" + "null:" + map.containsKey(null));
-        System.out.println("Map是否包含Value为" + "12:" + map.containsValue(12));
+        System.out.println("Map是否包含Value为" + "18:" + map.containsValue(18));
         System.out.println("Map是否包含Value为" + "null:" + map.containsValue(null));
         System.out.println("=============迭代器测试===================");
-        Set<Map.Entry<Integer, Integer>> set = ((HashMapImpl<Integer, Integer>) map).entrySet();
+        System.out.println("-------------entrySet-------------------");
+        Set<Map.Entry<Integer, Integer>> entrySet = map.entrySet();
         System.out.println(map);
-        for (Map.Entry<Integer, Integer> e : set) {
+        for (Map.Entry<Integer, Integer> e : entrySet) {
             System.out.println(e);
         }
+        System.out.println("-------------keySet-------------------");
+        Set<Integer> keySet = map.keySet();
+        for (int k : keySet) {
+            System.out.println(k);
+        }
+        System.out.println("-------------values-------------------");
+        List<Integer> values = map.values();
+        for (int v : values) {
+            System.out.println(v);
+        }
+        System.out.println("-------------values的方法-------------------");
+        System.out.println("元素:"+ null +" 在values的下标：" + values.indexOf(null) + "处");
+        System.out.println("元素:"+ 18 +" 在values的下标：" + values.indexOf(18) + "处");
+        System.out.println("values的下标：" + 0 + "处是元素：" + values.get(0));
     }
 }

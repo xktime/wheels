@@ -1,5 +1,6 @@
 package Util.Map;
 
+import Util.Collection.List.*;
 import Util.Collection.Set.Set;
 import Util.Funciton.ArrayDynamic;
 
@@ -45,9 +46,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public String toString() {
-            StringBuilder str = new StringBuilder();
-            str.append(key).append("=").append(value);
-            return str.toString();
+            return String.valueOf(key) + "=" + String.valueOf(value);
         }
     }
 
@@ -56,7 +55,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     private int length = 16;
     private Node<K, V>[] table;//桶表
     private int size = 0;
-    private Set<Entry<K,V>> entry;
+    private Set<Entry<K, V>> entrySet;
+    private Set<K> keySet;
+    private List<V> values;
 
     public HashMapImpl() {
         table = new Node[DEFAULT_SIZE];
@@ -69,9 +70,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     private void put(Node<K, V>[] arr, K key, V value) {
         int hash = hash(key);
-        Node newNode = new Node(null, key, value, key == null ? 0 : hash);
+        Node<K, V> newNode = new Node(null, key, value, key == null ? 0 : hash);
         int index = hash & (length - 1);
-        Node oldNode = arr[index];
+        Node<K, V> oldNode = arr[index];
         if (oldNode == null) {
             //如果桶内没有元素,直接放入
             arr[index] = newNode;
@@ -112,7 +113,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     public void remove(K key) {
         int hash = hash(key);
         int index = hash & (length - 1);
-        Node node = table[index];
+        Node<K, V> node = table[index];
         if (node != null) {
             //如果链头就是要删除的元素
             if (node.hash == (key == null ? 0 : hash)
@@ -173,7 +174,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     public String toString() {
         StringBuilder str1 = new StringBuilder();
         for (int i = 0; i < table.length; i++) {
-            for (Node node = table[i]; node != null; node = node.next) {
+            for (Node<K, V> node = table[i]; node != null; node = node.next) {
                 str1.append(node.key).append('=').append(node.value).append("、");
             }
         }
@@ -192,8 +193,8 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         this.size = 0;//先给size置0
         Node[] tempArr = new Node[length];
         for (int i = 0; i < table.length; i++) {
-            for (Node node = table[i]; node != null; node = node.next) {
-                put(tempArr, (K) node.key, (V) node.value);
+            for (Node<K, V> node = table[i]; node != null; node = node.next) {
+                put(tempArr, node.key, node.value);
             }
         }
         return tempArr;
@@ -224,26 +225,40 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     }
 
     public Set<Entry<K, V>> entrySet() {
-        if (entry == null) {
-            entry = new EntrySet();
+        if (entrySet == null) {
+            entrySet = new EntrySet();
         }
-        return entry;
+        return entrySet;
     }
 
-    private class EntrySet implements Set {
+    public Set<K> keySet() {
+        if (keySet == null) {
+            keySet = new KeySet();
+        }
+        return keySet;
+    }
+
+    public List<V> values() {
+        if (values == null) {
+            values = new Values();
+        }
+        return values;
+    }
+
+    private class EntrySet implements Set<Entry<K, V>> {
 
         @Override
-        public boolean add(Object element) {
+        public boolean add(Entry<K, V> element) {
             throw new UnsupportedOperationException();
         }
 
         @Override
-        public void addAll(Object[] elements) {
+        public void addAll(Entry<K, V>[] elements) {
             throw new UnsupportedOperationException();
         }
 
         @Override
-        public boolean remove(Object element) {
+        public boolean remove(Entry<K, V> element) {
             throw new UnsupportedOperationException();
         }
 
@@ -253,14 +268,10 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         }
 
         @Override
-        public boolean contains(Object element) {
-            if (!(element instanceof Entry)) {
-                return false;
-            }
-            Entry e = (Entry) element;
-            Node n = getNode(hash(e.getKey()), e.getKey());
+        public boolean contains(Entry<K, V> element) {
+            Node n = getNode(hash(element.getKey()), element.getKey());
             if (n != null) {
-                return e.getValue() == null ? n.getValue() == null : e.getValue().equals(n.getValue());
+                return element.getValue() == null ? n.getValue() == null : element.getValue().equals(n.getValue());
             }
             return false;
         }
@@ -276,21 +287,151 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         }
 
         @Override
-        public Object[] toArray() {
-            return new Object[0];
+        public Entry<K, V>[] toArray() {
+            return null;
         }
 
         @Override
-        public Iterator iterator() {
+        public Iterator<Entry<K, V>> iterator() {
             return new EntryItr();
         }
 
     }
 
+    private class Values implements List<V> {
+
+        @Override
+        public boolean add(V v) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void addAll(V... v) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean remove(V v) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public V get(int index) {
+            if (index < 0) {
+                throw new IllegalArgumentException("参数错误");
+            }
+            if (index >= size) {
+                throw new ArrayIndexOutOfBoundsException("参数错误");
+            }
+            int i = 0;
+            for (V v : values) {
+                if (i == index) {
+                    return v;
+                }
+                i++;
+            }
+            return null;
+        }
+
+        @Override
+        public int indexOf(V v) {
+            int index = 0;
+            for (V value : values) {
+                if (v == null ? value == null : v.equals(value)) {
+                    return index;
+                }
+                index++;
+            }
+            return -1;
+        }
+
+        @Override
+        public boolean contains(V v) {
+            return HashMapImpl.this.containsValue(v);
+        }
+
+        @Override
+        public void clear() {
+            HashMapImpl.this.clear();
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return size == 0;
+        }
+
+        @Override
+        public int size() {
+            return size;
+        }
+
+        @Override
+        public V[] toArray() {
+            return null;
+        }
+
+        @Override
+        public Iterator<V> iterator() {
+            return new ValueItr();
+        }
+    }
+
+    private class KeySet implements Set<K> {
+
+        @Override
+        public boolean add(K k) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void addAll(K[] k) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean remove(K k) {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void clear() {
+            HashMapImpl.this.clear();
+        }
+
+        @Override
+        public boolean contains(K k) {
+            return HashMapImpl.this.containsKey(k);
+        }
+
+        @Override
+        public boolean isEmpty() {
+            return size == 0;
+        }
+
+        @Override
+        public int size() {
+            return size;
+        }
+
+        @Override
+        public K[] toArray() {
+            return null;
+        }
+
+        @Override
+        public Iterator<K> iterator() {
+            return new KeyItr();
+        }
+
+    }
+
+    /**
+     * -------------------------Iterator------------------------------------------------------
+     */
     private abstract class HashItr {
         int index = 0;
-        Node node;
-        Node nextNode;
+        Node<K, V> node;
+        Node<K, V> nextNode;
 
         HashItr() {
             //初始化时找到第一个不为空的桶
@@ -303,7 +444,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             }
         }
 
-        protected Node<K, V> getNext() {
+        private Node<K, V> getNext() {
             if (node == null) {
                 return null;
             }
@@ -333,6 +474,24 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             Entry<K, V> e = node;
             node = nextNode;
             return e;
+        }
+    }
+
+    private class KeyItr extends HashItr implements Iterator<K> {
+        @Override
+        public K next() {
+            Entry<K, V> e = node;
+            node = nextNode;
+            return e.getKey();
+        }
+    }
+
+    private class ValueItr extends HashItr implements Iterator<V> {
+        @Override
+        public V next() {
+            Entry<K, V> e = node;
+            node = nextNode;
+            return e.getValue();
         }
     }
 }
