@@ -4,7 +4,7 @@ import Util.Collection.List.ArrayListImpl;
 
 public class ArrayDynamicTest {
     public static void main(String[] args) {
-        ArrayListImpl<Integer> list = new ArrayListImpl<Integer>(5);
+        ArrayListImpl<Integer> list = new ArrayListImpl<>(5);
         System.out.println("=============添加元素===================");
         for (int i = 0; i < 10; i++) {
             list.add(i);

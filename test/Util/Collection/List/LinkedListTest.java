@@ -2,7 +2,7 @@ package Util.Collection.List;
 
 public class LinkedListTest {
     public static void main(String[] args) {
-        List<Integer> linkedList = new LinkedListImpl<Integer>();
+        List<Integer> linkedList = new LinkedListImpl<>();
         System.out.println("=============添加元素===================");
         linkedList.addAll(0,1,2,3,4,5,6,7,8,9);
         System.out.println(linkedList);
@@ -43,7 +43,7 @@ public class LinkedListTest {
             System.out.println("-------------------------------------");
         }
         System.out.println("=============测试Iterator，使用foreach遍历===================");
-        for (Object i : linkedList) {
+        for (int i : linkedList) {
             System.out.print(i + " ");
         }
     }

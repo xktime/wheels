@@ -2,7 +2,7 @@ package DataStructure.Queue;
 
 public class CircularQueueTest {
     public static void main(String[] args) {
-        Queue<Integer> queue = new CircularQueueImpl<Integer>(5);
+        Queue<Integer> queue = new CircularQueueImpl<>(5);
         System.out.println("=============入队===================");
         for (int i = 0; i < 5; i++) {
             queue.enQueue(i);

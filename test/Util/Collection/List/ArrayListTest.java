@@ -2,7 +2,7 @@ package Util.Collection.List;
 
 public class ArrayListTest {
     public static void main(String[] args) {
-        ArrayListImpl<Integer> arrayList = new ArrayListImpl<Integer>();
+        ArrayListImpl<Integer> arrayList = new ArrayListImpl<>();
         System.out.println("=============添加元素===================");
         arrayList.addAll(0,1,2,3,4,5,6,7,8,9);
         System.out.println(arrayList);
@@ -32,7 +32,7 @@ public class ArrayListTest {
             System.out.println("-------------------------------------");
         }
         System.out.println("=============测试Iterator，使用foreach遍历===================");
-        for (Object i : arrayList) {
+        for (int i : arrayList) {
             System.out.print(i + " ");
         }
     }

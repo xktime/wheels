@@ -2,7 +2,7 @@ package DataStructure.Stack;
 
 public class ArrayStackTest {
 	public static void main(String[] args) {
-		Stack<Integer> stack = new ArrayStackImpl<Integer>(4);
+		Stack<Integer> stack = new ArrayStackImpl<>(4);
 		System.out.println("=============入栈===================");
 		//入栈操作
 		for (int i = 0; i < 10; i++) {

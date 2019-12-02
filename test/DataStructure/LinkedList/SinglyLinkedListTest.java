@@ -2,7 +2,7 @@ package DataStructure.LinkedList;
 
 public class SinglyLinkedListTest {
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new SinglyLinkedListImpl<Integer>();
+        LinkedList<Integer> linkedList = new SinglyLinkedListImpl<>();
         System.out.println("===============添加元素=================");
         for (int i = 0; i < 10; i++) {
             linkedList.add(i);

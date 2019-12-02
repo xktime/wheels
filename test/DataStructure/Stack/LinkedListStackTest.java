@@ -2,7 +2,7 @@ package DataStructure.Stack;
 
 public class LinkedListStackTest {
     public static void main(String[] args) {
-        Stack<Integer> stack = new LinkedListStackImpl<Integer>();
+        Stack<Integer> stack = new LinkedListStackImpl<>();
         System.out.println("=============入栈===================");
         //入栈操作
         for (int i = 0; i < 10; i++) {

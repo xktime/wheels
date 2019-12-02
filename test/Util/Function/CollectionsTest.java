@@ -7,7 +7,7 @@ import Util.Collection.List.List;
 
 public class CollectionsTest {
 	public static void main(String[] args) {
-		List<Character> list = new LinkedListImpl<Character>();
+		List<Character> list = new LinkedListImpl<>();
 		list.addAll('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h');
 		System.out.println("=============打乱前===================");
 		System.out.println(list);
