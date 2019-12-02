@@ -12,12 +12,12 @@ import java.util.Iterator;
 public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     private class Node<K, V> implements Entry<K, V> {
-        private Node next;
+        private Node<K, V> next;
         private K key;
         private V value;
         private int hash;
 
-        Node(Node next, K key, V value, int hash) {
+        Node(Node<K, V> next, K key, V value, int hash) {
             this.next = next;
             this.key = key;
             this.value = value;
@@ -143,8 +143,8 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     @Override
     public boolean containsValue(V value) {
-        for (int i = 0; i < table.length; i++) {
-            for (Node node = table[i]; node != null; node = node.next) {
+        for (Node<K, V> n : table) {
+            for (Node node = n; node != null; node = node.next) {
                 if (value == null ? node.value == null : value.equals(node.value)) {
                     return true;
                 }
@@ -173,8 +173,8 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     @Override
     public String toString() {
         StringBuilder str1 = new StringBuilder();
-        for (int i = 0; i < table.length; i++) {
-            for (Node<K, V> node = table[i]; node != null; node = node.next) {
+        for (Node<K, V> n : table) {
+            for (Node<K, V> node = n; node != null; node = node.next) {
                 str1.append(node.key).append('=').append(node.value).append("、");
             }
         }
@@ -191,9 +191,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     protected Object[] resize(Object[] array, int size, double resizedSize) {
         length = (int) resizedSize;
         this.size = 0;//先给size置0
-        Node[] tempArr = new Node[length];
-        for (int i = 0; i < table.length; i++) {
-            for (Node<K, V> node = table[i]; node != null; node = node.next) {
+        Node<K, V>[] tempArr = new Node[length];
+        for (Node<K, V> n : table) {
+            for (Node<K, V> node = n; node != null; node = node.next) {
                 put(tempArr, node.key, node.value);
             }
         }
@@ -437,33 +437,41 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             //初始化时找到第一个不为空的桶
             for (int i = 0; i < table.length; i++) {
                 if (table[i] != null) {
-                    node = table[i];
+                    nextNode = table[i];
                     index = i;
                     break;
                 }
             }
         }
 
-        private Node<K, V> getNext() {
-            if (node == null) {
+        protected Node<K, V> nextNode() {
+            if (nextNode == null) {
                 return null;
             }
-            if (node.next != null) {
-                return node.next;
+            //如果有直接后继节点
+            if (nextNode.next != null) {
+                node = nextNode;
+                nextNode = nextNode.next;
+                return node;
             } else {
+                //如果没有直接后继节点，去别的桶里面找
                 for (int i = (index + 1); i < table.length; i++) {
                     if (table[i] != null) {
                         index = i;
-                        return table[i];
+                        node = nextNode;
+                        nextNode = table[i];
+                        return node;
                     }
                 }
+                //如果没有找到
+                node = nextNode;
+                nextNode = null;
+                return node;
             }
-            return null;
         }
 
         public final boolean hasNext() {
-            nextNode = getNext();
-            return node != null;
+            return nextNode != null;
         }
 
     }
@@ -471,27 +479,21 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     private class EntryItr extends HashItr implements Iterator<Entry<K, V>> {
         @Override
         public Entry<K, V> next() {
-            Entry<K, V> e = node;
-            node = nextNode;
-            return e;
+            return nextNode();
         }
     }
 
     private class KeyItr extends HashItr implements Iterator<K> {
         @Override
         public K next() {
-            Entry<K, V> e = node;
-            node = nextNode;
-            return e.getKey();
+            return nextNode().getKey();
         }
     }
 
     private class ValueItr extends HashItr implements Iterator<V> {
         @Override
         public V next() {
-            Entry<K, V> e = node;
-            node = nextNode;
-            return e.getValue();
+            return nextNode().getValue();
         }
     }
 }
