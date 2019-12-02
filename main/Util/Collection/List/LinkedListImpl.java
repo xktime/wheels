@@ -38,8 +38,8 @@ public class LinkedListImpl<T> implements List<T> {
         if (elements == null) {
             return;
         }
-        for (int i = 0; i < elements.length; i++) {
-            add(elements[i]);
+        for (T element : elements) {
+            add(element);
         }
     }
 
