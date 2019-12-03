@@ -288,7 +288,13 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public Entry<K, V>[] toArray() {
-            return null;
+            Entry<K, V>[] newArray =  new Entry[size()];
+            int i = 0;
+            for(Entry e : entrySet) {
+                newArray[i] = e;
+                i++;
+            }
+            return newArray;
         }
 
         @Override
@@ -367,7 +373,13 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public V[] toArray() {
-            return null;
+            V[] newArray =  (V[])new Object[size()];
+            int i = 0;
+            for(V v : values) {
+                newArray[i] = v;
+                i++;
+            }
+            return newArray;
         }
 
         @Override
@@ -415,7 +427,13 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public K[] toArray() {
-            return null;
+            K[] newArray =  (K[])new Object[size()];
+            int i = 0;
+            for(K k : keySet) {
+                newArray[i] = k;
+                i++;
+            }
+            return newArray;
         }
 
         @Override
