@@ -448,6 +448,21 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             return new KeyItr();
         }
 
+        @Override
+        public String toString() {
+            StringBuilder str1 = new StringBuilder();
+            for(K k : keySet) {
+                str1.append(k).append("、");
+            }
+            int index = str1.lastIndexOf("、");
+            //如果有顿号，则删除最后一个顿号
+            if (index != -1) {
+                str1.delete(index, index + 1);
+            }
+            str1.insert(0, '[').append(']');
+            return str1.toString();
+        }
+
     }
 
     /**
