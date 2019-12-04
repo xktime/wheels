@@ -9,14 +9,14 @@ public class HashMapTest {
         System.out.println("=============添加元素===================");
         //测试添加和正常扩容
         for (int i = 0; i < 20; i++) {
-            map.put(i, i);
+            System.out.println("MapPutKey为：" + i + "的value为:" + map.put(i, i));
         }
         System.out.println(map);
         System.out.println("Map的元素个数为：" + map.size());
         System.out.println("=============覆盖KEY===================");
         //测试是否正常覆盖value
         for (int i = 0; i < 10; i++) {
-            map.put(i, i + 1);
+            System.out.println("MapPutKey为：" + i + "的value为:" + map.put(i, i + 1));
         }
         System.out.println(map);
         System.out.println("Map的元素个数为：" + map.size());
@@ -28,7 +28,7 @@ public class HashMapTest {
         System.out.println("Map的元素个数为：" + map.size());
         System.out.println("=============删除元素===================");
         for (int i = 0; i <= 16; i++) {
-            map.remove(i);
+            System.out.println("MapRemoveKey为：" + i + "的value为:" + map.remove(i));
         }
         map.remove(null);
         System.out.println(map);

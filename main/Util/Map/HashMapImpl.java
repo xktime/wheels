@@ -64,15 +64,16 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     }
 
     @Override
-    public void put(K key, V value) {
-        put(table, key, value);
+    public V put(K key, V value) {
+        return put(table, key, value);
     }
 
-    private void put(Node<K, V>[] arr, K key, V value) {
+    private V put(Node<K, V>[] arr, K key, V value) {
         int hash = hash(key);
         Node<K, V> newNode = new Node(null, key, value, key == null ? 0 : hash);
         int index = hash & (length - 1);
         Node<K, V> oldNode = arr[index];
+        V oldValue = null;
         if (oldNode == null) {
             //如果桶内没有元素,直接放入
             arr[index] = newNode;
@@ -84,6 +85,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
                 if (oldNode.hash == (key == null ? 0 : hash)
                         && (key == null ? oldNode.key == null : key.equals(oldNode.key))) {
                     //Map中有Key的情况
+                    oldValue = oldNode.value;
                     oldNode.value = value;
                     break;
                 }
@@ -100,6 +102,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         if (size > length * EXPANSION_PROBABILITY) {
             table = (Node<K, V>[]) resize(table, size, length << 1);
         }
+        return oldValue;
     }
 
 
@@ -110,7 +113,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     }
 
     @Override
-    public void remove(K key) {
+    public V remove(K key) {
         int hash = hash(key);
         int index = hash & (length - 1);
         Node<K, V> node = table[index];
@@ -118,21 +121,25 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             //如果链头就是要删除的元素
             if (node.hash == (key == null ? 0 : hash)
                     && (key == null ? node.key == null : key.equals(node.key))) {
+                V v = node.value;
                 table[index] = node.next;
                 size--;
+                return v;
             } else {
                 //如果要删除的元素在后面
                 while (node.next != null) {
                     if (node.next.hash == (key == null ? 0 : hash)
                             && (key == null ? node.next.key == null : key.equals(node.next.key))) {
+                        V v = node.next.value;
                         node.next = node.next.next;
                         size--;
-                        break;
+                        return v;
                     }
                     node = node.next;
                 }
             }
         }
+        return null;
     }
 
     @Override

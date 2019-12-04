@@ -4,7 +4,7 @@ import Util.Collection.List.*;
 import Util.Collection.Set.Set;
 
 public interface Map<K, V> {
-    void put(K key, V value); //放入键值
+    V put(K key, V value); //放入键值
 
     V get(K key);//根据key取所对应的value
 
@@ -14,7 +14,7 @@ public interface Map<K, V> {
 
     List<V> values();
 
-    void remove(K key);//删除指定键的键值
+    V remove(K key);//删除指定键的键值
 
     boolean containsKey(K key);//Map是否包含该键
 
