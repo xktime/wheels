@@ -42,6 +42,13 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         public void setValue(V value) {
             this.value = value;
         }
+
+        @Override
+        public String toString() {
+            StringBuilder str = new StringBuilder();
+            str.append(key).append("=").append(value);
+            return str.toString();
+        }
     }
 
     private static final int DEFAULT_SIZE = 16;//默认大小
