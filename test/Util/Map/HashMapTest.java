@@ -1,5 +1,7 @@
 package Util.Map;
 
+import Util.Collection.Set.Set;
+
 public class HashMapTest {
     public static void main(String[] args) {
         Map<Integer, Integer> map = new HashMapImpl<>();
@@ -35,5 +37,11 @@ public class HashMapTest {
         System.out.println("Map是否包含Key为" + "null:" + map.containsKey(null));
         System.out.println("Map是否包含Value为" + "12:" + map.containsValue(12));
         System.out.println("Map是否包含Value为" + "null:" + map.containsValue(null));
+        System.out.println("=============迭代器测试===================");
+        Set<Map.Entry<Integer, Integer>> set = ((HashMapImpl<Integer, Integer>) map).entrySet();
+        System.out.println(map);
+        for (Map.Entry<Integer, Integer> e : set) {
+            System.out.println(e);
+        }
     }
 }

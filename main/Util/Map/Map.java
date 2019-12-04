@@ -25,5 +25,6 @@ public interface Map<K, V> {
         void setKey(K k);
 
         void setValue(V v);
+
     }
 }

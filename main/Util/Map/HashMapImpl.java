@@ -49,6 +49,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
     private int length = 16;
     private Node<K, V>[] table;//桶表
     private int size = 0;
+    private Set<Entry<K,V>> entry;
 
     public HashMapImpl() {
         table = new Node[DEFAULT_SIZE];
@@ -215,8 +216,11 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         return null;
     }
 
-    public Set<Entry<K, V>> entrySet(){
-        return new EntrySet();
+    public Set<Entry<K, V>> entrySet() {
+        if (entry == null) {
+            entry = new EntrySet();
+        }
+        return entry;
     }
 
     private class EntrySet implements Set {
@@ -246,7 +250,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             if (!(element instanceof Entry)) {
                 return false;
             }
-            Entry e = (Entry)element;
+            Entry e = (Entry) element;
             Node n = getNode(hash(e.getKey()), e.getKey());
             if (n != null) {
                 return e.getValue() == null ? n.getValue() == null : e.getValue().equals(n.getValue());
@@ -271,10 +275,57 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public Iterator iterator() {
+            return new EntryItr();
+        }
+
+    }
+
+    private abstract class HashItr {
+        int index = 0;
+        Node node;
+        Node nextNode;
+
+        HashItr() {
+            //初始化时找到第一个不为空的桶
+            for (int i = 0; i < table.length; i++) {
+                if (table[i] != null) {
+                    node = table[i];
+                    index = i;
+                    break;
+                }
+            }
+        }
+
+        protected Node<K, V> getNext() {
+            if (node == null) {
+                return null;
+            }
+            if (node.next != null) {
+                return node.next;
+            } else {
+                for (int i = (index + 1); i < table.length; i++) {
+                    if (table[i] != null) {
+                        index = i;
+                        return table[i];
+                    }
+                }
+            }
             return null;
         }
-    }
-    private class HashItr{
 
+        public final boolean hasNext() {
+            nextNode = getNext();
+            return node != null;
+        }
+
+    }
+
+    private class EntryItr extends HashItr implements Iterator<Entry<K, V>> {
+        @Override
+        public Entry<K, V> next() {
+            Entry<K, V> e = node;
+            node = nextNode;
+            return e;
+        }
     }
 }
