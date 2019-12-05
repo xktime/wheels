@@ -52,20 +52,16 @@ public class ArrayStackImpl<T> extends ArrayDynamic<T> implements Stack<T> {
 
     @Override
     public String toString() {
-        //按入栈顺序打印
         StringBuilder str1 = new StringBuilder();
-        if (isEmpty()) {
-            return str1.append('[').append(']').toString();
+        for (int i = 0; i < size(); i++) {
+            str1.append(array[i]).append('、');
         }
-        str1.append('[');
-        for (int i = 0; i < topPoint; i++) {
-            if (i != (topPoint - 1)) {
-                str1.append(array[i]).append('、');
-            } else {
-                str1.append(array[i]);
-            }
+        int index = str1.lastIndexOf("、");
+        //如果有顿号，则删除最后一个顿号
+        if (index != -1) {
+            str1.delete(index, index + 1);
         }
-        str1.append(']');
+        str1.insert(0, '[').append(']');
         return str1.toString();
     }
 

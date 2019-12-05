@@ -123,15 +123,15 @@ public class ArrayListImpl<T> extends ArrayDynamic<T> implements List<T> {
     @Override
     public String toString() {
         StringBuilder str1 = new StringBuilder();
-        str1.append('[');
         for (int i = 0; i < size(); i++) {
-            if (i != (size() - 1)) {
-                str1.append(array[i]).append('、');
-            } else {
-                str1.append(array[i]);
-            }
+            str1.append(array[i]).append('、');
         }
-        str1.append(']');
+        int index = str1.lastIndexOf("、");
+        //如果有顿号，则删除最后一个顿号
+        if (index != -1) {
+            str1.delete(index, index + 1);
+        }
+        str1.insert(0, '[').append(']');
         return str1.toString();
     }
 
