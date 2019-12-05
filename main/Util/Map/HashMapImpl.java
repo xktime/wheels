@@ -11,45 +11,6 @@ import java.util.Iterator;
  */
 public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
-    private class Node<K, V> implements Entry<K, V> {
-        private Node<K, V> next;
-        private K key;
-        private V value;
-        private int hash;
-
-        Node(Node<K, V> next, K key, V value, int hash) {
-            this.next = next;
-            this.key = key;
-            this.value = value;
-            this.hash = hash;
-        }
-
-        @Override
-        public K getKey() {
-            return key;
-        }
-
-        @Override
-        public V getValue() {
-            return value;
-        }
-
-        @Override
-        public void setKey(K key) {
-            this.key = key;
-        }
-
-        @Override
-        public void setValue(V value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return String.valueOf(key) + "=" + String.valueOf(value);
-        }
-    }
-
     private static final int DEFAULT_SIZE = 16;//默认大小
     private static final float EXPANSION_PROBABILITY = 0.75f;//负载因子
     private int length = 16;
@@ -111,6 +72,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         Node<K, V> oldNode = getNode(hash(key), key);
         return oldNode == null ? null : oldNode.value;
     }
+
 
     @Override
     public V remove(K key) {
@@ -252,6 +214,48 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         return values;
     }
 
+    /**
+     * -----------------------容器以及节点等内部类----------------------------------
+     */
+    private class Node<K, V> implements Entry<K, V> {
+        private Node<K, V> next;
+        private K key;
+        private V value;
+        private int hash;
+
+        Node(Node<K, V> next, K key, V value, int hash) {
+            this.next = next;
+            this.key = key;
+            this.value = value;
+            this.hash = hash;
+        }
+
+        @Override
+        public K getKey() {
+            return key;
+        }
+
+        @Override
+        public V getValue() {
+            return value;
+        }
+
+        @Override
+        public void setKey(K key) {
+            this.key = key;
+        }
+
+        @Override
+        public void setValue(V value) {
+            this.value = value;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(key) + "=" + String.valueOf(value);
+        }
+    }
+
     private class EntrySet implements Set<Entry<K, V>> {
 
         @Override
@@ -295,9 +299,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public Entry<K, V>[] toArray() {
-            Entry<K, V>[] newArray =  new Entry[size()];
+            Entry<K, V>[] newArray = new Entry[size()];
             int i = 0;
-            for(Entry e : entrySet) {
+            for (Entry e : entrySet) {
                 newArray[i] = e;
                 i++;
             }
@@ -380,9 +384,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public V[] toArray() {
-            V[] newArray =  (V[])new Object[size()];
+            V[] newArray = (V[]) new Object[size()];
             int i = 0;
-            for(V v : values) {
+            for (V v : values) {
                 newArray[i] = v;
                 i++;
             }
@@ -434,9 +438,9 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
         @Override
         public K[] toArray() {
-            K[] newArray =  (K[])new Object[size()];
+            K[] newArray = (K[]) new Object[size()];
             int i = 0;
-            for(K k : keySet) {
+            for (K k : keySet) {
                 newArray[i] = k;
                 i++;
             }
@@ -451,7 +455,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         @Override
         public String toString() {
             StringBuilder str1 = new StringBuilder();
-            for(K k : keySet) {
+            for (K k : keySet) {
                 str1.append(k).append("、");
             }
             int index = str1.lastIndexOf("、");
