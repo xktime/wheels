@@ -6,9 +6,9 @@ import Util.Collection.List.List;
 /**
  * 冒泡排序
  */
-public class BubbleSort implements Sort {
+public class BubbleSort<T extends Comparable<? super T>> implements Sort<T> {
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         if (list == null || list.isEmpty()) {
             return;
         }

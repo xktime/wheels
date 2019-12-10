@@ -6,14 +6,14 @@ import Util.Funciton.Collections;
 /**
  * 快速排序
  */
-public class QuickSort implements Sort {
+public class QuickSort<T extends Comparable<? super T>> implements Sort<T> {
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         Collections.shuffle(list);//打乱，
         quickSort(list, 0, list.size() - 1); //普通快速排序
     }
 
-    private void quickSort(List<? extends Comparable> list, int low, int high) {
+    private void quickSort(List<T> list, int low, int high) {
         if (list == null || list.isEmpty()) {
             return;
         }
@@ -26,11 +26,11 @@ public class QuickSort implements Sort {
         quickSort(list, partition + 1, high);//将右边排序
     }
 
-    private int partition(List<? extends Comparable> list, int low, int high) {
+    private int partition(List<T> list, int low, int high) {
         int partition = high;
         int lo = low + 1;
         //基准元素
-        Comparable c = list.get(low);
+        T c = list.get(low);
         while (true) {
             //从后找到比第一位小的值
             while (c.compareTo(list.get(partition)) < 0) {

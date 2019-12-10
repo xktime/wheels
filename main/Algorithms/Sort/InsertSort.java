@@ -6,9 +6,9 @@ import Util.Collection.List.List;
 /**
  * 插入排序
  */
-public class InsertSort implements Sort {
+public class InsertSort<T extends Comparable<? super T>> implements Sort<T> {
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         if (list == null || list.isEmpty()) {
             return;
         }

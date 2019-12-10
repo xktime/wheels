@@ -6,9 +6,9 @@ import Util.Funciton.Collections;
 /**
  * 3向切分快速排序
  */
-public class Quick3WaySort implements Sort {
+public class Quick3WaySort<T extends Comparable<? super T>> implements Sort<T> {
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         Collections.shuffle(list);//打乱，
         quick3way(list, 0, list.size() - 1);//3向快速排序
     }
@@ -16,7 +16,7 @@ public class Quick3WaySort implements Sort {
     /**
      * 3向快速排序（适用于相同元素较多的情况）
      */
-    private void quick3way(List<? extends Comparable> list, int low, int high) {
+    private void quick3way(List<T> list, int low, int high) {
         if (list == null || list.isEmpty()) {
             return;
         }
@@ -27,7 +27,7 @@ public class Quick3WaySort implements Sort {
         int mid = low + 1;//list[lo..mid]都等于基准元素
         int hi = high;//list[hi..high]都大于基准元素
         //基准元素
-        Comparable c = list.get(low);
+        T c = list.get(low);
         while(mid <= hi) {
             if (c.compareTo(list.get(mid)) > 0) {
                 Collections.swap(list, lo++, mid++);

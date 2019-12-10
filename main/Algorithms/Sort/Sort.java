@@ -2,6 +2,6 @@ package Algorithms.Sort;
 
 import Util.Collection.List.List;
 
-public interface Sort {
-    void sort(List<? extends Comparable> list);
+public interface Sort<T extends Comparable<? super T>> {
+    void sort(List<T> list);
 }

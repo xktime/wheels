@@ -11,21 +11,21 @@ import java.util.Random;
 public class Collections {
 
     //排序(默认冒泡排序)
-    public static void sort(List<? extends Comparable> list) {
+    public static <T extends Comparable<? super T>> void sort(List<T> list) {
         if (list == null || list.isEmpty()) {
             return;
         }
-        Sort sort = new BubbleSort();
+        Sort<T> sort = new BubbleSort<>();
         sort.sort(list);
     }
 
     //排序（根据排序枚举取排序算法）
-    public static void sort(List<? extends Comparable> list, SortType sortType) {
+    public static <T extends Comparable<? super T>> void sort(List<T> list, SortType sortType) {
         if (list == null || list.isEmpty() || sortType == null) {
             return;
         }
-        SortFactory sortFactory = new SortFactory();
-        Sort sort = sortFactory.createSort(sortType);
+        SortFactory<T> sortFactory = new SortFactory<>();
+        Sort<T> sort = sortFactory.createSort(sortType);
         if (sort == null) {
             return;
         }

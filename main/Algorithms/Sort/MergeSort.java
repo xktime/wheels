@@ -2,11 +2,11 @@ package Algorithms.Sort;
 
 import Util.Collection.List.List;
 
-public class MergeSort implements Sort {
+public class MergeSort<T extends Comparable<? super T>> implements Sort<T> {
 
 
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         if (list == null || list.isEmpty()) {
             return;
         }
@@ -16,7 +16,7 @@ public class MergeSort implements Sort {
     /**
      * 对list[low..high]进行排序
      */
-    private void sort(List<? extends Comparable> list, int low, int high) {
+    private void sort(List<T> list, int low, int high) {
         if (list == null || low < 0 || high < 0) {
             //异常跳出
             return;

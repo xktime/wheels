@@ -1,9 +1,9 @@
 package Util.Function;
 
 import Algorithms.Enums.SortType;
-import Util.Funciton.Collections;
 import Util.Collection.List.LinkedListImpl;
 import Util.Collection.List.List;
+import Util.Funciton.Collections;
 
 public class CollectionsTest {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class CollectionsTest {
 		Collections.shuffle(list);
 		System.out.println("=============打乱后===================");
 		System.out.println(list);
-		Collections.sort(list, SortType.INSERT_SORT);
+		Collections.sort(list, SortType.QUICK_3_WAY_SORT);
 		System.out.println("=============排序后===================");
 		System.out.println(list);
 		System.out.println("=============反转后===================");

@@ -6,9 +6,9 @@ import Util.Collection.List.List;
 /**
  * 选择排序
  */
-public class SelectionsSort implements Sort {
+public class SelectionsSort<T extends Comparable<? super T>> implements Sort<T> {
     @Override
-    public void sort(List<? extends Comparable> list) {
+    public void sort(List<T> list) {
         if (list == null || list.isEmpty()) {
             return;
         }
