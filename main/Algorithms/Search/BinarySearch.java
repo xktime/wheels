@@ -6,14 +6,15 @@ import Util.Funciton.Collections;
 /**
  * 二分查找
  */
-public class BinarySearch implements Search {
-    private Comparable c;
+public class BinarySearch<T extends Comparable<? super T>> implements Search<T> {
+    private T c;
 
     /**
      * @param c 所要查找的元素
      * @return 已排序数组返回所要查找元素的下标（如果是未排序数组，返回的是该数组排序之后元素所在下标）
      */
-    public int search(List<? extends Comparable> list, Comparable c) {
+    @Override
+    public int search(List<T> list, T c) {
         this.c = c;
         Collections.sort(list);
         if (list == null || c == null || list.isEmpty()) {
@@ -22,7 +23,7 @@ public class BinarySearch implements Search {
         return binarySearch(list, 0, list.size() - 1);
     }
 
-    private int binarySearch(List<? extends Comparable> list, int low, int high) {
+    private int binarySearch(List<T> list, int low, int high) {
         if (low > high) {
             return -1;
         }

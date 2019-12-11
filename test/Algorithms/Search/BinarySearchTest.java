@@ -1,12 +1,11 @@
-package Algorithms;
+package Algorithms.Search;
 
-import Algorithms.Search.BinarySearch;
 import Util.Collection.List.ArrayListImpl;
 import Util.Collection.List.List;
 
 public class BinarySearchTest {
     public static void main(String[] args) {
-        BinarySearch b = new BinarySearch();
+        Search<String> b = new BinarySearch<>();
         List<String> list = new ArrayListImpl<>();
         list.addAll("a","b","c","d","e","f","g","h");
         System.out.println(list);
