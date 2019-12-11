@@ -34,7 +34,7 @@ public class MergeSort<T extends Comparable<? super T>> implements Sort<T> {
     /**
      * 将list[low..mid]和list[mid+1..high]归并
      */
-    private void merger(List list, int low, int mid, int high) {
+    private void merger(List<T> list, int low, int mid, int high) {
         if (list == null
                 || low < 0
                 || mid < 0
@@ -54,14 +54,15 @@ public class MergeSort<T extends Comparable<? super T>> implements Sort<T> {
             } else if (k > high) {
                 //如果后一个有序数组的数据已经全部放入
                 temArr[i] = list.get(j++);
-            } else if (list.get(j).hashCode() < list.get(k).hashCode()) {
-                //使用hashCode来判定大小，Comparable泛型带不进来.....
+            } else if (list.get(j).compareTo(list.get(k)) < 0) {
                 temArr[i] = list.get(j++);
             } else {
                 temArr[i] = list.get(k++);
             }
         }
         list.clear();
-        list.addAll(temArr);
+        for (Object t : temArr) {
+            list.add((T)t);
+        }
     }
 }
