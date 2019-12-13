@@ -8,34 +8,25 @@ package LeetCode;
  */
 public class JumpGame {
     public static void main(String[] args) {
-        int[] nums = {2, 3, 1, 1, 4};
+        int[] nums = {2, 0, 0, 1, 4};
         System.out.println(new JumpGame().canJump(nums));
     }
 
     /**
-     * 使用的递归实现，效率很低，其实只需要查找判定是否可以跳过元素为0的点就可以了
+     *  动态规划实现，还有种方法，查找判定是否可以跳过元素为0的点就可以了
      */
-    private int count = 0;
-
     private boolean canJump(int[] nums) {
-        jump(nums, 0);
-        return count > 0;
-    }
-
-    private void jump(int[] nums, int index) {
-        //如果有一个解就不再判断接下来的
-        if (count > 0) {
-            return;
+        boolean[] f = new boolean[nums.length];
+        f[0] = true;
+        for (int i = 1; i < nums.length; i++) {
+            f[i] = false;
+            for (int j = 0; j < i; j++) {
+                if (f[j] && j + nums[j] >= i) {
+                    f[i] = true;
+                    break;
+                }
+            }
         }
-        if (index == nums.length - 1) {
-            count++;
-        }
-        if (index >= nums.length) {
-            return;
-        }
-        int num = nums[index];
-        for (int i = index + 1; i <= index + num && i < nums.length; i++) {
-            jump(nums, i);
-        }
+        return f[nums.length - 1];
     }
 }
