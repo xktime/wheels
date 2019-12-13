@@ -10,10 +10,10 @@ import Util.Collection.List.List;
  */
 public class GrayCode {
     public static void main(String[] args) {
-        System.out.println(new GrayCode().grayCode(2));
+        System.out.println(new GrayCode().grayCode(3));
     }
 
-    public List<Integer> grayCode(int n) {
+    private List<Integer> grayCode(int n) {
         List<Integer> arr = new ArrayListImpl<>();
         for (int i = 0; i < 1 << n; ++i)
             arr.add(i ^ i >> 1);
