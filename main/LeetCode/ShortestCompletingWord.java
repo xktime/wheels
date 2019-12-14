@@ -27,7 +27,7 @@ public class ShortestCompletingWord {
                 license[index++] = c;
             }
         }
-        //把下标words[i]出现的次数放入ints[i]
+        //把words[i]出现的次数放入ints[i]
         int[] ints = new int[words.length];
         for (int i = 0; i < words.length; i++) {
             char[] word = words[i].toCharArray();
