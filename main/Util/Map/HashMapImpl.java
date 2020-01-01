@@ -31,7 +31,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
 
     private V put(Node<K, V>[] arr, K key, V value) {
         int hash = hash(key);
-        Node<K, V> newNode = new Node(null, key, value, key == null ? 0 : hash);
+        Node<K, V> newNode = new Node(null, key, value, hash);
         int index = hash & (length - 1);
         Node<K, V> oldNode = arr[index];
         V oldValue = null;
@@ -81,7 +81,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
         Node<K, V> node = table[index];
         if (node != null) {
             //如果链头就是要删除的元素
-            if (node.hash == (key == null ? 0 : hash)
+            if (node.hash == hash
                     && (key == null ? node.key == null : key.equals(node.key))) {
                 V v = node.value;
                 table[index] = node.next;
@@ -90,7 +90,7 @@ public class HashMapImpl<K, V> extends ArrayDynamic implements Map<K, V> {
             } else {
                 //如果要删除的元素在后面
                 while (node.next != null) {
-                    if (node.next.hash == (key == null ? 0 : hash)
+                    if (node.next.hash == hash
                             && (key == null ? node.next.key == null : key.equals(node.next.key))) {
                         V v = node.next.value;
                         node.next = node.next.next;

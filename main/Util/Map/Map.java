@@ -4,7 +4,10 @@ import Util.Collection.List.*;
 import Util.Collection.Set.Set;
 
 public interface Map<K, V> {
-    V put(K key, V value); //放入键值
+    /**
+     * @return 被覆盖的value
+     */
+    V put(K key, V value);
 
     V get(K key);//根据key取所对应的value
 
