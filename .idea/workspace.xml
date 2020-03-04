@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bdf76675-fe8d-42ca-b42b-f85d2565ff45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Enums/SortType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Fibonacci.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/NQueen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Search/BinarySearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Search/CommonSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Search/Search.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/BubbleSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/InsertSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/MergeSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/Quick3WaySort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/QuickSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/SelectionsSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Algorithms/Sort/Sort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/DoublyLinkedListImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/DoublyLinkedListImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/LinkedList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/SinglyLinkedListImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/SinglyLinkedListImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/LinkedList/SinglyLinkedListImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Queue/CircularQueueImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Queue/LinkedListQueueImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Queue/LinkedListQueueImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Queue/LinkedListQueueImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Queue/Queue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Stack/ArrayStackImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Stack/LinkedListStackImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Stack/LinkedListStackImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Stack/LinkedListStackImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Stack/Stack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Tree/BinarySearchTreeImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Tree/BinarySearchTreeImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DataStructure/Tree/Tree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/Beverage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/BubbleImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/CoconutImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/Decorator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/MilkyTeaImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/DecoratorPattern/PuddingImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/FactoryPattern/CoffeeShopImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/FactoryPattern/CokeShopImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/FactoryPattern/DrinkShop.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/FactoryPattern/DrinkShopFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/FactoryPattern/MilkyTeaShopImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/ObserverPattern/News.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/ObserverPattern/Observable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/ObserverPattern/Observer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/ObserverPattern/Reader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/SingletonPattern/SingletonPatternImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/StrategyPattern/AmericanImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/StrategyPattern/ChineseImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/StrategyPattern/Peopel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/DesignPattern/StrategyPattern/RestaurantImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/LeetCode/GrayCode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/LeetCode/JumpGame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/LeetCode/ShortestCompletingWord.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/LeetCode/SingleNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/Collection.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/ArrayListImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/ArrayListImpl$Itr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/ArrayListImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/LinkedListImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/LinkedListImpl$Itr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/LinkedListImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/LinkedListImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/List/List.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/Set/HashSetImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Collection/Set/Set.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Factory/SortFactory$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Factory/SortFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Funciton/ArrayDynamic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Funciton/Collections.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$EntryItr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$EntrySet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$HashItr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$KeyItr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$KeySet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$ValueItr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl$Values.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/HashMapImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/Map$Entry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/wheels/Util/Map/Map.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/FibonacciTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/NQueenTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Search/BinarySearchTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Search/CommonSearchTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/BubbleSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/InsertSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/MergeSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/Quick3WaySortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/QuickSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Algorithms/Sort/SelectionsSortTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/LinkedList/DoublyLinkedListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/LinkedList/SinglyLinkedListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/Queue/CircularQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/Queue/LinkedListQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/Stack/ArrayStackTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/Stack/LinkedListStackTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DataStructure/Tree/BinarySearchTreeTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DesignPattern/DecoratorPatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DesignPattern/FactoryPatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DesignPattern/ObserverPatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DesignPattern/SingletonPatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/DesignPattern/StrategyPatternTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Collection/List/ArrayListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Collection/List/LinkedListTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Collection/Set/HashSetTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Function/ArrayDynamicTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Function/CollectionsTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/wheels/Util/Map/HashMapTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wheels.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/wheels$BinarySearchTest.ic" NAME="BinarySearchTest Coverage Results" MODIFIED="1576065600298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Algorithms.Search.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="241" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1988353723">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="124" />
+          <entry key="project.open.time.0" value="26" />
+          <entry key="project.open.time.1" value="29" />
+          <entry key="project.open.time.10" value="9" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.137" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.39" value="3" />
+          <entry key="project.open.time.40" value="2" />
+          <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.42" value="3" />
+          <entry key="project.open.time.43" value="3" />
+          <entry key="project.open.time.44" value="2" />
+          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.48" value="3" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.50" value="2" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.52" value="4" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.58" value="1" />
+          <entry key="project.open.time.63" value="1" />
+          <entry key="project.open.time.66" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.open.time.8" value="7" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="126" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="765" />
+          <entry key="md" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="765" />
+          <entry key="Markdown" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="35" />
+          <entry key="java" value="38520" />
+          <entry key="md" value="16" />
+          <entry key="txt" value="1078" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="38520" />
+          <entry key="Markdown" value="16" />
+          <entry key="PLAIN_TEXT" value="1113" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="wheels" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/LeetCode/SingleNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Object</find>
+      <find>while</find>
+      <find>getNode</find>
+      <find>containsv</find>
+      <find>remova</find>
+      <find>Node</find>
+      <find>put</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../halo" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main/Algorithms/Enums/SortType.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/Quick3Way.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/Quick3WaySortTest.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/NQueen.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/NQueenTest.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/Sort/InsertSortTest.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/BinarySearch.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/BinarySearchTest.java" />
+        <option value="$PROJECT_DIR$/main/Util/Collection/Collection.java" />
+        <option value="$PROJECT_DIR$/main/Util/Collection/Set/Set.java" />
+        <option value="$PROJECT_DIR$/main/Util/Collection/List/LinkedListImpl.java" />
+        <option value="$PROJECT_DIR$/test/Util/Collection/List/ArrayListTest.java" />
+        <option value="$PROJECT_DIR$/test/Util/Collection/List/LinkedListTest.java" />
+        <option value="$PROJECT_DIR$/test/Util/Function/ArrayDynamicTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/LinkedList/DoublyLinkedListTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/LinkedList/SinglyLinkedListTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/Queue/CircularQueueTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/Queue/LinkedListQueueTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/Stack/ArrayStackTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructure/Stack/LinkedListStackTest.java" />
+        <option value="$PROJECT_DIR$/main/Util/Collection/Set/HashSetImpl.java" />
+        <option value="$PROJECT_DIR$/test/Util/Collection/Set/HashSetTest.java" />
+        <option value="$PROJECT_DIR$/main/Util/Collection/List/ArrayListImpl.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Fibonacci.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/FibonacciTest.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/Sort.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/BubbleSort.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/InsertSort.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/SelectionsSort.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/Quick3WaySort.java" />
+        <option value="$PROJECT_DIR$/test/Util/Function/CollectionsTest.java" />
+        <option value="$PROJECT_DIR$/main/Util/Factory/SortFactory.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/QuickSort.java" />
+        <option value="$PROJECT_DIR$/main/Util/Funciton/Collections.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Sort/MergeSort.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Search/Search.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Search/BinarySearch.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/Search/BinarySearchTest.java" />
+        <option value="$PROJECT_DIR$/test/Algorithms/Search/CommonSearchTest.java" />
+        <option value="$PROJECT_DIR$/main/Algorithms/Search/CommonSearch.java" />
+        <option value="$PROJECT_DIR$/main/DataStructure/Stack/ArrayStackImpl.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/GrayCode.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/SmallestStringWithSwaps.java" />
+        <option value="$PROJECT_DIR$/main/Util/Map/HashMapImpl.java" />
+        <option value="$PROJECT_DIR$/main/Util/Map/Map.java" />
+        <option value="$PROJECT_DIR$/test/Util/Map/HashMapTest.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/ShortestCompletingWord.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/JumpGame.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/SingleNumber.java" />
+        <option value="$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-23" />
+    <option name="y" value="69" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="wheels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wheels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wheels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wheels" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wheels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wheels" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583325721008" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Algorithms.Search" />
+      <recent name="Algorithms.Sort" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\wheels\test\Algorithms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Algorithms.Search" />
+      <recent name="Algorithms" />
+      <recent name="Algorithms.Sort" />
+      <recent name="FactoryPattern" />
+      <recent name="DecoratorPattern" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\wheels\main" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MaximumSubarray">
+    <configuration name="HashMapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Util.Map.HashMapTest" />
+      <module name="wheels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Util.Map.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JumpGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.JumpGame" />
+      <module name="wheels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaximumSubarray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.MaximumSubarray" />
+      <module name="wheels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShortestCompletingWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.ShortestCompletingWord" />
+      <module name="wheels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LeetCode.SingleNumber" />
+      <module name="wheels" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LeetCode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JumpGame" />
+      <item itemvalue="Application.ShortestCompletingWord" />
+      <item itemvalue="Application.SingleNumber" />
+      <item itemvalue="Application.HashMapTest" />
+      <item itemvalue="Application.MaximumSubarray" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MaximumSubarray" />
+        <item itemvalue="Application.SingleNumber" />
+        <item itemvalue="Application.HashMapTest" />
+        <item itemvalue="Application.ShortestCompletingWord" />
+        <item itemvalue="Application.JumpGame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdf76675-fe8d-42ca-b42b-f85d2565ff45" name="Default Changelist" comment="" />
+      <created>1568603810999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568603810999</updated>
+      <workItem from="1568603817826" duration="3081000" />
+      <workItem from="1568616258344" duration="7000" />
+      <workItem from="1568616868533" duration="59000" />
+      <workItem from="1568616997531" duration="181000" />
+      <workItem from="1568618036790" duration="8284000" />
+      <workItem from="1568636714271" duration="2324000" />
+      <workItem from="1568706613660" duration="8812000" />
+      <workItem from="1568721392206" duration="4261000" />
+      <workItem from="1568791262793" duration="3448000" />
+      <workItem from="1568796019993" duration="10912000" />
+      <workItem from="1568874441355" duration="6542000" />
+      <workItem from="1568899041800" duration="4000" />
+      <workItem from="1569050755932" duration="3391000" />
+      <workItem from="1569415435403" duration="2451000" />
+      <workItem from="1569501287313" duration="2065000" />
+      <workItem from="1570541715403" duration="1150000" />
+      <workItem from="1570621134827" duration="4228000" />
+      <workItem from="1570794437027" duration="683000" />
+      <workItem from="1570796176598" duration="5270000" />
+      <workItem from="1570869014824" duration="2008000" />
+      <workItem from="1571054756946" duration="1921000" />
+      <workItem from="1571131375066" duration="5384000" />
+      <workItem from="1571230406973" duration="868000" />
+      <workItem from="1571232162907" duration="264000" />
+      <workItem from="1571317662386" duration="2522000" />
+      <workItem from="1571810465367" duration="1488000" />
+      <workItem from="1571917027262" duration="7295000" />
+      <workItem from="1572245137076" duration="10197000" />
+      <workItem from="1572608583471" duration="5519000" />
+      <workItem from="1572435426329" duration="3913000" />
+      <workItem from="1572522290481" duration="2113000" />
+      <workItem from="1572527899804" duration="563000" />
+      <workItem from="1572528766154" duration="4000" />
+      <workItem from="1572588776301" duration="277000" />
+      <workItem from="1572589347689" duration="887000" />
+      <workItem from="1572590301863" duration="7543000" />
+      <workItem from="1572867743347" duration="1297000" />
+      <workItem from="1572953719163" duration="3538000" />
+      <workItem from="1572959241036" duration="405000" />
+      <workItem from="1572959698305" duration="726000" />
+      <workItem from="1573027329684" duration="1621000" />
+      <workItem from="1573029078466" duration="10301000" />
+      <workItem from="1573110329233" duration="2394000" />
+      <workItem from="1573219005310" duration="603000" />
+      <workItem from="1573281895772" duration="255000" />
+      <workItem from="1573282231820" duration="39000" />
+      <workItem from="1573282294624" duration="336000" />
+      <workItem from="1573282722831" duration="3478000" />
+      <workItem from="1573559453019" duration="1390000" />
+      <workItem from="1573562004257" duration="3904000" />
+      <workItem from="1573614604061" duration="50000" />
+      <workItem from="1573646047430" duration="1649000" />
+      <workItem from="1573638418025" duration="5180000" />
+      <workItem from="1573732200540" duration="2360000" />
+      <workItem from="1573799250435" duration="1786000" />
+      <workItem from="1574077021242" duration="3960000" />
+      <workItem from="1574164339436" duration="2638000" />
+      <workItem from="1574250470523" duration="777000" />
+      <workItem from="1574252706570" duration="131000" />
+      <workItem from="1574409371880" duration="2938000" />
+      <workItem from="1574684211281" duration="482000" />
+      <workItem from="1574684798474" duration="1133000" />
+      <workItem from="1574686033070" duration="103000" />
+      <workItem from="1574769181728" duration="359000" />
+      <workItem from="1574769647078" duration="668000" />
+      <workItem from="1574770601304" duration="96000" />
+      <workItem from="1574839838363" duration="1358000" />
+      <workItem from="1574855690240" duration="253000" />
+      <workItem from="1574856020949" duration="572000" />
+      <workItem from="1574856763855" duration="58000" />
+      <workItem from="1574857141662" duration="263000" />
+      <workItem from="1574857437467" duration="546000" />
+      <workItem from="1575008970952" duration="14000" />
+      <workItem from="1575009135973" duration="90000" />
+      <workItem from="1575009328227" duration="529000" />
+      <workItem from="1575010137639" duration="309000" />
+      <workItem from="1575010650518" duration="691000" />
+      <workItem from="1575011423119" duration="272000" />
+      <workItem from="1575011721213" duration="502000" />
+      <workItem from="1575012335075" duration="1208000" />
+      <workItem from="1575255086744" duration="3454000" />
+      <workItem from="1575431955679" duration="96000" />
+      <workItem from="1575432057851" duration="4000" />
+      <workItem from="1575432102573" duration="272000" />
+      <workItem from="1575432405688" duration="41000" />
+      <workItem from="1575432468728" duration="88000" />
+      <workItem from="1575432594421" duration="59000" />
+      <workItem from="1575432665963" duration="435000" />
+      <workItem from="1575433165061" duration="1205000" />
+      <workItem from="1575434507921" duration="244000" />
+      <workItem from="1575279140800" duration="600000" />
+      <workItem from="1575287823881" duration="274000" />
+      <workItem from="1575288125493" duration="104000" />
+      <workItem from="1575288245029" duration="4050000" />
+      <workItem from="1575292515632" duration="1963000" />
+      <workItem from="1575362554308" duration="1376000" />
+      <workItem from="1575374549207" duration="315000" />
+      <workItem from="1575444226220" duration="611000" />
+      <workItem from="1575445251190" duration="406000" />
+      <workItem from="1575445690213" duration="31000" />
+      <workItem from="1575445792984" duration="805000" />
+      <workItem from="1575446642634" duration="1794000" />
+      <workItem from="1575545754414" duration="1094000" />
+      <workItem from="1575548541553" duration="136000" />
+      <workItem from="1575891698526" duration="4474000" />
+      <workItem from="1575898630074" duration="57000" />
+      <workItem from="1575969840838" duration="648000" />
+      <workItem from="1575977853077" duration="1380000" />
+      <workItem from="1575979280481" duration="344000" />
+      <workItem from="1575979740009" duration="910000" />
+      <workItem from="1575984912494" duration="23000" />
+      <workItem from="1576043405976" duration="97000" />
+      <workItem from="1576064500104" duration="1802000" />
+      <workItem from="1576131932280" duration="5385000" />
+      <workItem from="1576156457896" duration="210000" />
+      <workItem from="1576221140029" duration="7308000" />
+      <workItem from="1576303446366" duration="2113000" />
+      <workItem from="1576463450827" duration="599000" />
+      <workItem from="1576497197151" duration="2151000" />
+      <workItem from="1576565072501" duration="600000" />
+      <workItem from="1576571434400" duration="22000" />
+      <workItem from="1576571946339" duration="54000" />
+      <workItem from="1577190601642" duration="3000" />
+      <workItem from="1577846731824" duration="1023000" />
+      <workItem from="1578245110277" duration="269000" />
+      <workItem from="1583323307700" duration="2400000" />
+    </task>
+    <task id="LOCAL-00051" summary="修改：HashMap">
+      <created>1573216052183</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1573216052184</updated>
+    </task>
+    <task id="LOCAL-00052" summary="添加：Collection接口">
+      <created>1573283506439</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1573283506440</updated>
+    </task>
+    <task id="LOCAL-00053" summary="结构整理">
+      <created>1573285758202</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1573285758202</updated>
+    </task>
+    <task id="LOCAL-00054" summary="添加：排序测试类">
+      <created>1573286204046</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1573286204046</updated>
+    </task>
+    <task id="LOCAL-00055" summary="添加：HashMap动态调整大小">
+      <created>1573566755906</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566755907</updated>
+    </task>
+    <task id="LOCAL-00056" summary="修改：HashMap的Hash算法">
+      <created>1573647697576</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1573647697577</updated>
+    </task>
+    <task id="LOCAL-00057" summary="修改：Sort工厂">
+      <created>1573647584747</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1573647584748</updated>
+    </task>
+    <task id="LOCAL-00058" summary="添加：快速排序">
+      <created>1573650644829</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1573650644829</updated>
+    </task>
+    <task id="LOCAL-00059" summary="添加：3向快速排序">
+      <created>1573735760355</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1573735760355</updated>
+    </task>
+    <task id="LOCAL-00060" summary="修改：快速排序">
+      <created>1573800311548</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1573800311550</updated>
+    </task>
+    <task id="LOCAL-00061" summary="修改：3向快速排序">
+      <created>1573800323310</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1573800323310</updated>
+    </task>
+    <task id="LOCAL-00062" summary="添加：八皇后">
+      <created>1574084849475</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1574084849476</updated>
+    </task>
+    <task id="LOCAL-00063" summary="修改：八皇后">
+      <created>1574171458348</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1574171458349</updated>
+    </task>
+    <task id="LOCAL-00064" summary="文件整理">
+      <created>1574251751574</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1574251751576</updated>
+    </task>
+    <task id="LOCAL-00065" summary="添加：二分查找">
+      <created>1574412314231</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1574412314232</updated>
+    </task>
+    <task id="LOCAL-00066" summary="List添加Iterable实现">
+      <created>1574686134750</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1574686134751</updated>
+    </task>
+    <task id="LOCAL-00067" summary="修改HashMap的containsKey方法">
+      <created>1574770232718</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1574770232719</updated>
+    </task>
+    <task id="LOCAL-00068" summary="添加：Set接口">
+      <created>1574770690223</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1574770690223</updated>
+    </task>
+    <task id="LOCAL-00069" summary="添加：Map的Entry接口">
+      <created>1574857520399</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1574857520400</updated>
+    </task>
+    <task id="LOCAL-00070" summary="修改HashMap的EntrySet">
+      <created>1575013538952</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1575013538952</updated>
+    </task>
+    <task id="LOCAL-00071" summary="添加HashIterator">
+      <created>1575434367993</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1575434367994</updated>
+    </task>
+    <task id="LOCAL-00072" summary="添加HashMap的Node的toString">
+      <created>1575434730807</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1575434730807</updated>
+    </task>
+    <task id="LOCAL-00073" summary="添加HashMap的keySet和values">
+      <created>1575290924615</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1575290924616</updated>
+    </task>
+    <task id="LOCAL-00074" summary="降低HashMap的HashIterator与其子类的耦合">
+      <created>1575293529278</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1575293529278</updated>
+    </task>
+    <task id="LOCAL-00075" summary="foreach替代">
+      <created>1575294025091</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1575294025091</updated>
+    </task>
+    <task id="LOCAL-00076" summary="代码整理">
+      <created>1575294471128</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1575294471128</updated>
+    </task>
+    <task id="LOCAL-00077" summary="添加toArray">
+      <created>1575374847819</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1575374847820</updated>
+    </task>
+    <task id="LOCAL-00078" summary="修改Map接口与HashMap的实现">
+      <created>1575446575399</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1575446575399</updated>
+    </task>
+    <task id="LOCAL-00079" summary="添加HashMap的KeySet的toString">
+      <created>1575449575847</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1575449575847</updated>
+    </task>
+    <task id="LOCAL-00080" summary="添加HashSet的实现">
+      <created>1575449963921</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1575449963921</updated>
+    </task>
+    <task id="LOCAL-00081" summary="修改toString">
+      <created>1575547509551</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1575547509552</updated>
+    </task>
+    <task id="LOCAL-00082" summary="整理HashMap排版">
+      <created>1575548678006</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1575548678008</updated>
+    </task>
+    <task id="LOCAL-00083" summary="更新README">
+      <created>1575892248320</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1575892248321</updated>
+    </task>
+    <task id="LOCAL-00084" summary="添加：Fibonacci">
+      <created>1575898518679</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1575898518679</updated>
+    </task>
+    <task id="LOCAL-00085" summary="修改：Fibonacci">
+      <created>1575898688692</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1575898688693</updated>
+    </task>
+    <task id="LOCAL-00086" summary="修改：排序算法泛型">
+      <created>1575980643711</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1575980643712</updated>
+    </task>
+    <task id="LOCAL-00087" summary="修改：归并排序实现">
+      <created>1576064899441</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1576064899442</updated>
+    </task>
+    <task id="LOCAL-00088" summary="修改：search泛型">
+      <created>1576065720310</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1576065720310</updated>
+    </task>
+    <task id="LOCAL-00089" summary="添加：暴力查找">
+      <created>1576066262409</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1576066262409</updated>
+    </task>
+    <task id="LOCAL-00090" summary="LeetCodeNo.55跳跃游戏">
+      <created>1576137511883</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1576137511884</updated>
+    </task>
+    <task id="LOCAL-00091" summary="LeetCodeNo.89格雷编码">
+      <created>1576156665192</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1576156665193</updated>
+    </task>
+    <task id="LOCAL-00092" summary="修改：LeetCodeNo.89跳跃游戏">
+      <created>1576221826508</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1576221826509</updated>
+    </task>
+    <task id="LOCAL-00093" summary="修改：格雷编码">
+      <created>1576222787492</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1576222787492</updated>
+    </task>
+    <task id="LOCAL-00094" summary="修改：格雷编码">
+      <created>1576222831453</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1576222831454</updated>
+    </task>
+    <task id="LOCAL-00095" summary="LeetCodeNo.748最短完整词">
+      <created>1576228738195</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1576228738195</updated>
+    </task>
+    <task id="LOCAL-00096" summary="LeetCodeNo.748最短完整词">
+      <created>1576306399416</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1576306399418</updated>
+    </task>
+    <task id="LOCAL-00097" summary="LeetCodeNo.260只出现一次的数字">
+      <created>1576501354523</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1576501354524</updated>
+    </task>
+    <task id="LOCAL-00098" summary="修改HashMap测试用例">
+      <created>1577847368714</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1577847368715</updated>
+    </task>
+    <task id="LOCAL-00099" summary="LeetCodeNo.53最大子序列的和">
+      <created>1583325290914</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1583325290915</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="232510000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.50647247" side_tool="true" weight="0.2707889" />
+      <window_info id="Structure" order="5" sideWeight="0.50867677" side_tool="true" weight="0.27665246" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4913232" visible="true" weight="0.27665246" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24728851" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3394794" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.18221258" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="8" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32995737" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加HashMap的keySet和values" />
+    <MESSAGE value="降低HashMap的HashIterator与其子类的耦合" />
+    <MESSAGE value="foreach替代" />
+    <MESSAGE value="代码整理" />
+    <MESSAGE value="添加toArray" />
+    <MESSAGE value="修改Map接口与HashMap的实现" />
+    <MESSAGE value="添加HashMap的KeySet的toString" />
+    <MESSAGE value="添加HashSet的实现" />
+    <MESSAGE value="修改toString" />
+    <MESSAGE value="整理HashMap排版" />
+    <MESSAGE value="更新README" />
+    <MESSAGE value="添加：Fibonacci" />
+    <MESSAGE value="修改：Fibonacci" />
+    <MESSAGE value="修改：排序算法泛型" />
+    <MESSAGE value="修改：归并排序实现" />
+    <MESSAGE value="修改：search泛型" />
+    <MESSAGE value="添加：暴力查找" />
+    <MESSAGE value="LeetCodeNo.55跳跃游戏" />
+    <MESSAGE value="LeetCodeNo.89格雷编码" />
+    <MESSAGE value="修改：LeetCodeNo.89跳跃游戏" />
+    <MESSAGE value="修改：格雷编码" />
+    <MESSAGE value="LeetCodeNo.748最短完整词" />
+    <MESSAGE value="LeetCodeNo.260只出现一次的数字" />
+    <MESSAGE value="修改HashMap测试用例" />
+    <MESSAGE value="LeetCodeNo.53最大子序列的和" />
+    <option name="LAST_COMMIT_MESSAGE" value="LeetCodeNo.53最大子序列的和" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/DataStructure/Tree/BinarySortTreeTest.java</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>new SingleNumber().singleNumber(nums)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>word.length</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>ints</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getNext()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>chessBoard[row] == chessBoard[row] - k</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>chessBoard[row] == chessBoard[k]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>c</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list.get(partition)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>list.get(low)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>put(node.lChild, value)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>size(node.rChild)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Sort/Quick3WaySortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Sort/InsertSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Sort/BubbleSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/NQueenTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructure/Tree/BinarySearchTreeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructure/Stack/LinkedListStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/DataStructure/Queue/CircularQueueImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1435">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructure/Stack/ArrayStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/Collection/Set/HashSetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructure/Queue/LinkedListQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/DataStructure/Queue/LinkedListQueueImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Funciton/ArrayDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1295">
+          <caret line="37" column="48" lean-forward="true" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Collection/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Collection/Set/HashSetImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="245">
+            <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/Collection/List/ArrayListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Collection/Set/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/FibonacciTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Fibonacci.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/Sort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Funciton/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="67" column="35" lean-forward="true" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/Function/CollectionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Factory/SortFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/InsertSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/Quick3WaySort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1544">
+          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Sort/MergeSortTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/SelectionsSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/MergeSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Sort/BubbleSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Search/BinarySearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Search/CommonSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/DataStructure/Stack/LinkedListStackImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Search/CommonSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Algorithms/Search/BinarySearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/Search/Search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/DataStructure/Stack/ArrayStackImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Algorithms/NQueen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1171">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="2898" column="36" lean-forward="true" selection-start-line="2898" selection-start-column="36" selection-end-line="2898" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/SmallestStringWithSwaps.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="169" column="13" selection-start-line="169" selection-start-column="13" selection-end-line="169" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Collection/List/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Collection/List/ArrayListImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Util/Map/HashMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Map/HashMapImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/Util/Map/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/GrayCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/JumpGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/ShortestCompletingWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/SingleNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>wheels</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
