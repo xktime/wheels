@@ -25,6 +25,9 @@ public class ClimbingStairs {
         if (n <= 0) {
             return 0;
         }
+        if (n == 1) {
+            return 1;
+        }
         int[] arr = new int[n + 1];
         arr[1] = 1;
         arr[2] = 2;
