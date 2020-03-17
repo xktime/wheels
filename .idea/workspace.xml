@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdf76675-fe8d-42ca-b42b-f85d2565ff45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/LeetCode/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/LeetCode/SplitLinkedListInParts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/LeetCode/SplitLinkedListInParts.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/LeetCode/SplitLinkedListInParts.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
     <session id="-1988353723">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="126" />
+          <entry key="project.closed" value="128" />
           <entry key="project.open.time.0" value="26" />
           <entry key="project.open.time.1" value="29" />
           <entry key="project.open.time.10" value="9" />
@@ -38,6 +37,7 @@
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.190" value="1" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.33" value="1" />
@@ -50,7 +50,7 @@
           <entry key="project.open.time.43" value="3" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.45" value="1" />
-          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.47" value="3" />
           <entry key="project.open.time.48" value="3" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -66,7 +66,7 @@
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.8" value="7" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="128" />
+          <entry key="project.opened" value="130" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -86,14 +86,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="35" />
-          <entry key="java" value="39513" />
+          <entry key="java" value="39545" />
           <entry key="md" value="16" />
           <entry key="txt" value="1097" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="39513" />
+          <entry key="JAVA" value="39545" />
           <entry key="Markdown" value="16" />
           <entry key="PLAIN_TEXT" value="1132" />
         </counts>
@@ -108,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/LeetCode/SingleNumber.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
+            <state relative-caret-position="770">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -129,7 +129,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
+            <state relative-caret-position="805">
               <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
@@ -138,8 +138,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/LeetCode/SplitLinkedListInParts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="240">
+              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -248,7 +248,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-23" />
     <option name="y" value="69" />
     <option name="width" value="1936" />
@@ -263,8 +263,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,12 +286,14 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584373088462" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584373209255" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -556,7 +556,9 @@
       <workItem from="1578245110277" duration="269000" />
       <workItem from="1583323307700" duration="7191000" />
       <workItem from="1583847208625" duration="1763000" />
-      <workItem from="1584343724924" duration="3573000" />
+      <workItem from="1584343724924" duration="3663000" />
+      <workItem from="1584417168215" duration="604000" />
+      <workItem from="1584426261665" duration="2316000" />
     </task>
     <task id="LOCAL-00055" summary="添加：HashMap动态调整大小">
       <created>1573566755906</created>
@@ -905,7 +907,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242637000" />
+    <option name="totallyTimeSpent" value="245647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -917,17 +919,17 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.50647247" side_tool="true" weight="0.2707889" />
       <window_info id="Structure" order="5" sideWeight="0.50867677" side_tool="true" weight="0.27665246" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4913232" visible="true" weight="0.28304905" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4913232" visible="true" weight="0.28944564" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24728851" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24728851" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3394794" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1339,9 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1349,10 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1363,13 +1358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/LeetCode/ShortestCompletingWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/LeetCode/HouseRobber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1377,16 +1365,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="179">
+          <caret line="655" column="25" selection-start-line="655" selection-start-column="25" selection-end-line="655" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/LeetCode/SingleNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
+        <state relative-caret-position="770">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1394,10 +1382,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/ArrayList.java">
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/ShortestCompletingWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="655" column="25" selection-start-line="655" selection-start-column="25" selection-end-line="655" selection-end-column="25" />
+        <state relative-caret-position="420">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/LeetCode/MaximumSubarray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1410,8 +1405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/LeetCode/SplitLinkedListInParts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="240">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
         </state>
       </provider>
     </entry>

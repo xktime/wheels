@@ -30,16 +30,22 @@ public class SplitLinkedListInParts {
             num++;
         }
         ListNode[] nodes = new ListNode[k];
+        tempNode = root;
         int mod = num % k;
         int size = num / k;
         for (int i = 0; i < k; i++) {
-            nodes[0] = root;
-            for (int j = 0; j < size - 1; j++) {
-                root = root.next;
+            ListNode head = tempNode;
+            for (int j = 0; j < size + (i < mod ? 1 : 0) - 1; ++j) {
+                if (tempNode != null) {
+                    tempNode = tempNode.next;
+                }
             }
-            if (i < mod) {
-                root = root.next;
+            if (tempNode != null) {
+                ListNode prev = tempNode;
+                tempNode = tempNode.next;
+                prev.next = null;
             }
+            nodes[i] = head;
         }
         return nodes;
     }
