@@ -34,7 +34,7 @@ public class SplitLinkedListInParts {
         int mod = num % k;
         int size = num / k;
         for (int i = 0; i < k; i++) {
-            ListNode head = tempNode;
+            ListNode head = root;
             for (int j = 0; j < size + (i < mod ? 1 : 0) - 1; ++j) {
                 if (tempNode != null) {
                     tempNode = tempNode.next;
