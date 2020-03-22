@@ -9,27 +9,27 @@ package LeetCode;
  */
 public class MaximumSubarray {
 
-    public static void main(String[] args) {
-        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-        System.out.println(new MaximumSubarray().maxSubArray(nums));
-    }
+	public static void main(String[] args) {
+		int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+		System.out.println(new MaximumSubarray().maxSubArray(nums));
+	}
 
-    /**
-     * 思路：
-     *      只要子列或者元素是大于0的那么对结果有增益
-     *      否则抛弃掉
-     */
-    public int maxSubArray(int[] nums) {
-        int maxSum = nums[0];
-        int subArraySum = 0;
-        for (int num : nums) {
-            if (subArraySum > 0) {
-                subArraySum += num;
-            } else {
-                subArraySum = num;
-            }
-            maxSum = Math.max(maxSum, subArraySum);
-        }
-        return maxSum;
-    }
+	/**
+	 * 思路：
+	 * 只要子列或者元素是大于0的那么对结果有增益
+	 * 否则抛弃掉
+	 */
+	public int maxSubArray(int[] nums) {
+		int maxSum = nums[0];
+		int subArraySum = 0;
+		for (int num : nums) {
+			if (subArraySum > 0) {
+				subArraySum += num;
+			} else {
+				subArraySum = num;
+			}
+			maxSum = Math.max(maxSum, subArraySum);
+		}
+		return maxSum;
+	}
 }

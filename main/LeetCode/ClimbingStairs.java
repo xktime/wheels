@@ -13,27 +13,28 @@ package LeetCode;
  * 2.  2 阶
  */
 public class ClimbingStairs {
-    public static void main(String[] args) {
-        System.out.println(new ClimbingStairs().climbStairs(9));
-    }
-    /**
-     * 思路:
-     * 解为n-1阶往上爬一格 n-2阶向上爬两格
-     * 答案为两者之和
-     */
-    public int climbStairs(int n) {
-        if (n <= 0) {
-            return 0;
-        }
-        if (n == 1) {
-            return 1;
-        }
-        int[] arr = new int[n + 1];
-        arr[1] = 1;
-        arr[2] = 2;
-        for (int i = 3; i < arr.length; i++) {
-            arr[i] = arr[i - 1] + arr[i - 2];
-        }
-        return arr[n];
-    }
+	public static void main(String[] args) {
+		System.out.println(new ClimbingStairs().climbStairs(9));
+	}
+
+	/**
+	 * 思路:
+	 * 解为n-1阶往上爬一格 n-2阶向上爬两格
+	 * 答案为两者之和
+	 */
+	public int climbStairs(int n) {
+		if (n <= 0) {
+			return 0;
+		}
+		if (n == 1) {
+			return 1;
+		}
+		int[] arr = new int[n + 1];
+		arr[1] = 1;
+		arr[2] = 2;
+		for (int i = 3; i < arr.length; i++) {
+			arr[i] = arr[i - 1] + arr[i - 2];
+		}
+		return arr[n];
+	}
 }
